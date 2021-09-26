@@ -1,0 +1,602 @@
+
+<!DOCTYPE html>
+<head>
+<html lang="zh_cn">
+<meta charset="utf-8">
+<link rel="stylesheet"href="./css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>狐白Mud盒子 - 指令</title>
+</head>
+<body>
+    <div class="topdiv">
+<div class="top">
+    <img class="logoimg" src="imgs/logo.gif">
+    <h1 class="headtitle">狐白Mud盒子</h1>
+    <ul class="list">
+<li><a href="index.php">[指令]</a></li>
+<li><a href="wanfa.php">玩法</a></li>
+<li><a href="emote.php">表情</a></li>
+<li><a href="tool.php">工具</a></li>
+</ul>
+</div>
+<div class="search">
+            <input type="text" placeholder="搜索功能维护中" name="" id="" value="" />
+            <button><i>搜索</i></button>
+            <a href="https://jq.qq.com/?_wv=1027&k=uGZ3uZt4" target="_blank">黎明MUD:361801895</a>
+        </div>
+</div>
+<div class="mainshowbox">
+<div class="box">help xxx - 查询指令
+<br></div><div class="box">help cmds2 - 不常用指令
+<br></div><div class="box">help - 显示某一类别、某条命令的帮助
+<br></div><div class="box">help cmds - 可以查看本游戏的指令集
+<br></div><div class="box">help here - 查看所在地地图
+<br></div><div class="box">hp - 显示你的精, 气, 神, 属性, 各种上限等数值
+<br>指令格式：hp, hp -m, hp -g, hp -s
+</div><div class="box">sc/score - 显示你的基本资料可缩写为sc
+<br></div><div class="box">stats - 显示你的附加属性效果
+<br></div><div class="box">buff - 显示你现在拥有的附加状态
+<br></div><div class="box">title - 显示你目前的阶级和头衔
+<br></div><div class="box">i - 列出你目前身上所携带的所有物品
+<br></div><div class="box">id - 显示你的身上或者环境物品的英文名称及名字
+<br>如id, id here
+</div><div class="box">cha/skills - 让你查询所学过的技能也可使用 skills
+<br></div><div class="box">special - 查看特技，如果运用特技需加上参数
+<br>如：special hatred，运用杀气
+</div><div class="box">shop - 商城指令
+<br></div><div class="box">member - 会员指令
+<br></div><div class="box">pingjia - 为当期新人导师工作打分评价
+<br></div><div class="box">who - 可以列出所有在线上的玩家
+<br></div><div class="box">finger - 显示线上某玩家资料
+<br></div><div class="box">l/look - 查看你所在的环境、某件物品、生物、或是方向
+<br></div><div class="box">combat - 查看江湖上所有武功各种参数值
+<br></div><div class="box">cmd - 让随从使用指令
+<br>如: cmd chat
+</div><div class="box">topten - 查看游戏中各种榜单. 
+<br>如topten turen
+</div><div class="box">csk - 检查指定的某种技能或技能的特性, 绝招. 
+<br>如csk dugu-jiujian
+</div><div class="box">news - 阅读游戏新闻
+<br></div><div class="box">grep - 在新闻, 帮助系统中搜索指定查找的内容
+<br></div><div class="box">femote - 根据关键字查找表情动词
+<br>femote 你好 查看本游戏的表情指令中含有“你好”的表情
+</div><div class="box">time - 查看服务器的北京时间，游戏已运行时间，武林时间
+<br></div><div class="box">color - 游戏中各种色彩的ANSI控制字元及色彩的试样,
+<br></div><div class="box">quest - 查看你的帮派任务,门派任务,独孤任务信息
+<br></div><div class="box">quest5 - 查看你的郭靖任务信息, 军功情况
+<br></div><div class="box">wartime - 查看王朝任务(kingwar)进行时间, 战争贡献点数
+<br></div><div class="box">mazemap - 查看迷宫地图, 迷宫存在时间
+<br></div><div class="box">mazequest - 查看迷宫任务进度, 及副本BOSS进行进度
+<br></div><div class="box">tasks - 查看目前的所有使命
+<br></div><div class="box">locate - 查看使命(task)物品的大概位置
+<br></div><div class="box">pkd - 查看目前在屠人场中人物
+<br></div><div class="box">fenpei - 将人物等级升级获取的技能点数分配为后天属性. 
+<br>如fenpei 膂力 1
+</div><div class="box">nick - 为自己取一个响亮的名号或头衔或取消绰号，可以使用颜色符号
+<br></div><div class="box">changeinfo - 为中文名称, 英文id 增加颜色
+<br></div><div class="box">describe - 对自己的描述说明别人look 你可以看到
+<br></div><div class="box">passwd - 修改你的人物密码
+<br></div><div class="box">alias - 为人物定义命令的缩写
+<br>如alias ea eat gan liang, 给eat gan liang定义缩写指令ea
+</div><div class="box">do - 串连指令
+<br></div><div class="box">set - 设定一些环境变数，请见help settings
+<br></div><div class="box">unset - 删除环境变数的设定
+<br></div><div class="box">wimpy - 设定当战斗中「气」剩下百分之多少时，自动「逃跑」
+<br></div><div class="box">chat - 公开频道发送信息, 全游戏人都可看到.
+<br>其他还有匿名公开发送rumor, 帮派频道party等
+频道详情help channels
+</div><div class="box">chat* - 发送表情动词 chat* id
+<br></div><div class="box">ask - 打听，解谜
+<br>指令格式: ask <someone> about <something>
+</div><div class="box">answer - 刚才用 ask 和你说话的使用者说话
+<br></div><div class="box">whisper - 用来和同一房间中的人耳语别人无法看到内容
+<br></div><div class="box">tell - 和其他房间的使用者说话
+<br></div><div class="box">beep - 呼叫某人，你想呼叫的人的音箱内便会有提示音发出
+<br></div><div class="box">waitback - 等待发呆中的使用者，直到该使用者开始活动时通知您
+<br></div><div class="box">msg - 给某人(不在线上)留言
+<br></div><div class="box">sos - 在系统出现bug时来向巫师求助
+<br></div><div class="box">quit - 暂时离开游戏
+<br></div><div class="box">suicide -f - 当前用户自杀删除角色资料
+<br></div><div class="box">join turen - 异地报名参加屠人大赛, 当然得屠人大赛举行时才可用
+<br></div><div class="box">join kingwar - 异地报名参加王朝战争, 当然得在王朝战争进行时才可用
+<br></div><div class="box">list - 查看贩售物品列表
+<br></div><div class="box">buy - 购买物品
+<br></div><div class="box">eat - 吃食物, 药物
+<br></div><div class="box">drink - 喝容器里面的液体
+<br></div><div class="box">get - 让你捡起地上或容器内的某样物品
+<br></div><div class="box">drop - 让你丢下你所携带的物品
+<br></div><div class="box">put - 将某样物品放进一个容器
+<br></div><div class="box">give - 让你将某样物品给别人
+<br></div><div class="box">wield - 装备某件物品作武器
+<br></div><div class="box">unwield - 放下手中的武器
+<br></div><div class="box">wear - 装备某件防具
+<br></div><div class="box">remove - 脱掉身上某件防具
+<br></div><div class="box">hand - 将某件物品拿在手上，以备他用, 如暗器
+<br></div><div class="box">purchase - 求购另外一个玩家身上的物品
+<br>这个物品必须是拿(hand)在手里的
+</div><div class="box">halt - 停止战斗、打坐、吐纳、汲取等
+<br></div><div class="box">sleep - 睡觉在可以睡觉的地方睡觉，恢复体力
+<br></div><div class="box">fill - 在有水的地方把容器灌满清水
+<br>比如扬州茶馆fill shui dai可以把你身上的水袋装满水
+</div><div class="box">cut - 从某样东西上面割下一样东西
+<br>如：cut head from corpse
+</div><div class="box">cook - 做饭需要学习过基本厨艺和川菜技艺并激发，身上有菜料
+<br></div><div class="box">make - 炼制某样药品, 首先需要你会炼制这样药物
+<br></div><div class="box">lured - 放置诱饵打猎
+<br></div><div class="box">makelove - 和某人做爱
+<br></div><div class="box">paimai - 物品拍卖
+<br></div><div class="box">team - 队伍指令
+<br>如: team with <某人> - 跟某人组成队伍;
+ team dismiss - 离开队伍
+</div><div class="box">follow - 跟随某人或生物
+<br>follow none 停止跟随
+</div><div class="box">zhaohuan - 把你的魔幻兽召唤过来，并骑上
+<br></div><div class="box">rideto - 骑动物瞬移至指定地点
+<br></div><div class="box">open - 可以让你打开门
+<br></div><div class="box">close - 克里斯关下门
+<br></div><div class="box">souxun - 在地上寻找东西如使命(task)物品
+<br></div><div class="box">summon - 召唤自己的物品
+<br></div><div class="box">summon - 查看召唤列表
+<br></div><div class="box">hide - 隐藏自己的物品
+<br>必须是自己可以summon的才可以隐藏, 并且求抓取id与物品id一致
+</div><div class="box">touch - 触摸一件道具
+<br>touch你的十级兵器可以恢复内力
+</div><div class="box">stab - 将一件兵器插在地上
+<br></div><div class="box">miss - 追寻自己插在地上的十级兵器，可以瞬间到达该物品所在地
+<br></div><div class="box">aim - 使用导弹瞄准某人
+<br>  aim 某人ID
+  使用launch 导弹ID 发射
+</div><div class="box">launch - 发射已瞄准的导弹
+<br>launch 导弹ID
+</div><div class="box">enchase - 把一个特殊镶嵌物镶嵌到装备中去
+<br></div><div class="box">unenchase可将镶嵌在普通自造装备上的宝石取出
+<br></div><div class="box">combine - 合并物品，生成新的物品
+<br>如: combine red gem1 & red gem1 2 & red gem1 3  
+</div><div class="box">fuse - 将石头类物品熔化
+<br>每次熔炼都会增加一定数量的灵慧，但是会消耗一点最大内力
+</div><div class="box">resolve - 将动态装备分解
+<br>每次分解都会增加一定数量的灵慧，但是会消耗一点最大内力
+</div><div class="box">bunch - 帮派管理指令
+<br>详情help bunch
+</div><div class="box">area - 帮派地盘指令
+<br>详情help area
+</div><div class="box">brothers - 兄弟结拜、绝交、查看兄弟信息
+<br></div><div class="box">engage - 求婚, 对方答应即为私奔
+<br>如果想举行正式婚礼, help marry
+</div><div class="box">divorce - 单方面离婚
+<br></div><div class="box">bai - 让你拜某人为师
+<br></div><div class="box">shou - 让某人收你为徒, 玩家不可收人为徒
+<br></div><div class="box">tuoli - 向你的师傅请求脱离师门
+<br>将会受到特殊武学被追回的严重惩罚
+惩罚规则见help tuoli
+</div><div class="box">kaichu - 将弟子逐出师门, 弟子技能损失同tuoli
+<br></div><div class="box">huansu - 还俗，不做和尚尼姑小喇嘛了, 必须脱离门派后使用
+<br></div><div class="box">teach - 教随从技能
+<br></div><div class="box">du - 通过阅读秘笈或其他物品自学某些技巧
+<br></div><div class="box">xue - 你向别人请教有关某一种技能的疑难问题
+<br>如: xue lao jiugui force
+</div><div class="box">lian - 练习某个种类的技能. 如lian sword, 必须首先激发特殊剑法为基本剑法
+<br></div><div class="box">yanjiu - 你对某一种技能进行研究
+<br></div><div class="box">jiqu - 汲取实战体会，以提升自己的武学修养
+<br>可装备剑jiqu sword-cognize获取剑道修养, 停止指令halt
+</div><div class="box">yanlian - 可以让你将某些武功合而为一，成为一种新技能
+<br>如六脉神剑, 降龙十八掌
+</div><div class="box">closed - 大宗师可以用这条指令进行闭关修炼
+<br></div><div class="box">breakup - 进行炼气修炼
+<br>详情help closed
+</div><div class="box">animaout - 进行炼神修炼
+<br>详情help closed
+</div><div class="box">scheme - 计划练功, 内容需自行设置
+<br>help schedule
+</div><div class="box">reflect - 会员可以在计划时使用以提高少量经验和潜能
+<br></div><div class="box">fangqi - 放弃一项你所学过的技能到某个级别
+<br></div><div class="box">dazuo - 打坐，运气练功，将气转为内力
+<br>如: dazuo 10, 必须首先激发特殊内功为基本内功
+</div><div class="box">tuna - 打坐修行，将你的精转变成精力
+<br>如: tuna 10, 必须首先激发特殊内功为基本内功
+</div><div class="box">jifa - 指定所要用的技能，需指明技能种类和技能名称
+<br>如jifa sword taiji-jian
+</div><div class="box">bei - 指定所要用的空手技能
+<br>空手特殊技能使用之前必须先bei
+</div><div class="box">jiali - 指定每次击中敌人时，要发出几点内力伤敌
+<br>jiali越高伤害越高，消耗内力也越多
+可jiali max
+</div><div class="box">fight - 让你向一个人物「讨教」或者是「切磋武艺」
+<br></div><div class="box">hit - 直接向一个人物「进招」
+<br></div><div class="box">kill - 你主动开始攻击一个人物，并且试图杀死对方
+<br></div><div class="box">touxi - 向敌人偷袭偷袭不成时，则会招至反击
+<br></div><div class="box">ansuan - 暗算位于<方向>的<人物>
+<br></div><div class="box">exert - 用内力进行一些特异功能help force查看通用, 必须首先激发特殊内功为基本内功, 也可使用 yun
+<br></div><div class="box">perform - 使用你所学的外功的一些特殊的攻击方式或招式（绝招）如: perform sword.chan, 也可使用 yong, 
+<br>可csk 武功, 查看可以使用的绝招
+</div><div class="box">cls - 清客户端屏幕
+<br></div><div class="box">hatred - 显示自己所在的门派的仇恨对象和程度
+<br></div><div class="box">bjtime - 服务器的北京时间
+<br></div><div class="box">uptime - 告诉您该mud游戏已经连续执行了多久
+<br></div><div class="box">mudlist - 查看目前跟这个 Mud 取得联系中的其他 Mud
+<br></div><div class="box">wizlist - 列出目前所有的巫师名单
+<br></div><div class="box">semote - 列出目前所能使用的表情
+<br></div><div class="box">emote - 表达一个系统没有预设的动作词如emote 坐下
+<br></div><div class="box">tune - 关闭收听信息频道, 打开收听信息频道你可以用 help channels 查询目
+<br>前有哪些频道可以收听
+</div><div class="box">save - 修改存盘地点系统每隔一段时间自动保存玩家资料
+<br></div><div class="box">baitan - 摆摊设点，兜售货物需要先在襄阳黄真处加入商业协会
+<br></div><div class="box">map - 绘制地图
+<br></div><div class="box">guard - 守护命令
+<br></div><div class="box">push - 将他人推开
+<br></div><div class="box">right - 同意某人提出的要求
+<br></div><div class="box">refuse - 拒绝某人提出的要求
+<br></div><div class="box">pour - 将某样毒品下到一个容器中的饮食中
+<br></div><div class="box">drug - 在食物里面下毒
+<br></div><div class="box">daub - 在身上、武器、防具上面涂抹东西, 比如毒药
+<br></div><div class="box">wash - 洗手，物品、防具可以让你将武器、防具好好冲洗一下，清除上面的毒
+<br></div><div class="box">san - 升级十级武器用指令，使一个物品圣化以激发它的潜能
+<br></div><div class="box">imbue - 升级十级武器用指令，将一个物品浸入到另一个物品中
+<br></div><div class="box">accept - 接收来自故事的挑战者的挑战
+<br></div><div class="box">apply - 使用一个物品，发挥它的功效，比如战斗中施用烟雾弹可制造混乱趁机逃跑
+<br>长安杂货店有售
+</div><div class="box">steal - 偷他人身上的东西成功了, 当然你就能获得该样物品可是, 马有失蹄, 
+<br>人总有失风的时候, 当你失败时当然就得付出代价
+</div><div class="box">beg - 只有学了叫花绝活的丐帮弟子可以使用此指令，乞讨
+<br></div><div class="box">check - 只有学了道听途说的丐帮弟子可以使用此指令，打听别人所学过的技能
+<br></div><div class="box">persuade - 劝架峨嵋弟子专用可对在战斗中的人使用，若成功可以让双方停止战斗
+<br></div><div class="box">qi | ride - 你骑上代步的的动物
+<br></div><div class="box">xia | unride - 让你从骑着的动物上跳下来有些地方骑在马上不能进入
+<br></div><div class="box">train - 驯化某动物
+<br></div><div class="box">come - 让动物跟随主人行动
+<br></div><div class="box">attack - 让动物攻击敌人
+<br></div><div class="box">stop - 让动物停止对人的攻击 
+<br></div><div class="box">stay - 停止动物的跟随状态 
+<br></div><div class="box">release - 结束主奴状态，将动物放离
+<br></div><div class="box">exert recover		//消耗内力回血
+<br></div><div class="box">exert regenerate	//消耗内力回精神
+<br></div><div class="box">exert dispel	//内力疗疾，疗毒等
+<br></div><div class="box">exert lifeheal	//为他人疗伤，后面得跟人物ID
+<br></div><div class="box">exert heal	//为自己疗伤（恢复血上限）
+<br></div><div class="box">例：exert dispel abc	//为id为abc的人物疗疾或驱毒
+<br>    exert dispel		//为自己疗疾或驱毒
+</div><div class="box">dazuo XXX 1	//消耗XXX气血打坐一次
+<br></div><div class="box">tuna XXX 1	//消耗XXX精神吐纳
+<br></div><div class="box">get XXX	//拾取地上id为XXX的物品
+<br></div><div class="box">du XXX with 次数	//读id为XXX的书本多少次
+<br></div><div class="box">accept quest	//接受信件的任务
+<br></div><div class="box">use ba gua	//用八卦
+<br></div><div class="box">wield XX		//穿戴id为XXX的装备
+<br></div><div class="box">unwield XX	//脱下id为XXX的装备
+<br></div><div class="box">少林门口广场进伏魔圈(快捷键)
+<br>伏魔圈,west
+west
+south
+east
+south
+east
+north
+north
+east
+west
+south
+enter
+ask du jie about 金刚罩
+ask du e about 伏魔杖
+ask du nan about 菩提子
+</div><div class="box">少林拿易筋经(快捷键)
+<br>易筋经,xian 一
+xian 梦
+xian 如 3
+xian 是
+get jing from hole
+</div><div class="box">拿乾坤大挪移
+<br>w
+w
+wu
+wu
+w
+w
+enter
+break men
+enter
+n
+open north
+n
+open north
+n
+open north
+n
+ketou
+get qiankun book
+</div><div class="box">拿六脉神剑 - 拿六脉,n
+<br>n
+n
+n
+nw
+n
+ne
+e
+s
+s
+s
+e
+s
+s
+w
+s
+s
+s
+s
+s
+s
+</div><div class="box">扬州青竹林(快捷键) - 
+<br>扬州青竹林,e
+e
+e
+e
+n
+e
+n
+w
+n
+e
+n
+w
+n
+enter
+</div><div class="box">灵鹫拿书(快捷键) - 灵鹫拿书,zou tiesuo
+<br>eu
+n
+n
+n
+n
+n
+move jiashan
+enter
+nd
+nd
+ed
+n
+n
+n
+n
+n
+e
+n
+w
+w
+</div><div class="box">梅庄(快捷键) - 梅庄一键解密,n
+<br>sw
+w
+sw
+nw
+sw
+wu
+n
+n
+knock 4
+knock 2
+knock 5
+knock 3
+n
+n
+n
+n
+e
+s
+s
+w
+sw
+e
+s
+eu
+n
+n
+</div><div class="box">万劫谷(快捷键) - 万劫谷,n
+<br>n
+n
+n
+n
+n
+n
+nw
+nd
+w
+w
+w
+wu
+su
+wu
+wd
+nd
+w
+PUSHaside grass
+enter
+pull ring
+enter
+n
+out
+knock duan
+n
+</div><div class="box">巫师指令 - 
+<br>体格str　
+胆识cor　
+悟性int　
+灵性spi　
+定力cps　
+容貌per　
+根骨con　
+福缘kar
+</div><div class="box">气血eff_kee/max_kee内力force/max_force/maximum_force
+<br></div><div class="box">精神sen/max_sen法力 mana/max_mana /maximum_mana
+<br></div><div class="box">道行　daoxing　武学　combat_exp
+<br></div><div class="box">加潜能　call player->add(potential,100)
+<br></div><div class="box">减年龄　call player->add(mud_age,20000)
+<br></div><div class="box">昏/醒　 call player->unconcious()/revive()
+<br></div><div class="box">离婚call player->set(married,0)
+<br></div><div class="box">物件的位置
+<br></div><div class="box">信箱　clone /obj/mailbox
+<br></div><div class="box">冰刀　clone /d/obj/misc/redblueice
+<br></div><div class="box">银票　clone /obj/money/thousand-cash
+<br></div><div class="box">还魂丹clone /d/obj/drug/dan
+<br></div><div class="box">还阳丹clone /d/obj/drug/huanyang
+<br></div><div class="box">蛋糕　clone /d/obj/food/cake
+<br></div><div class="box">巫师会议厅goto /d/wiz/wizroom
+<br></div><div class="box">goto离开时系统信息　set msg_mout $HIY$千面怪向上离开.
+<br></div><div class="box">goto到达时系统信息　set msg_min $HIY$千面怪走了过来.
+<br></div><div class="box">隐身设置/现身设置 　set invisibility/unset invisibility
+<br></div><div class="box">克隆时系统信息　set msg_clone
+<br></div><div class="box">毁灭物件是系统信息　set msg_dest
+<br></div><div class="box">改动wizlist立即生效的命令 update /adm/daemons/securityd.c
+<br></div><div class="box">summon id 抓人
+<br></div><div class="box">smash id 用闪电打人
+<br></div><div class="box">destroy id 用枪把人kickout
+<br></div><div class="box">rename id name 改名子
+<br></div><div class="box">award id title $HIW$title内容$NOR$ 给title
+<br></div><div class="box">goto id
+<br></div><div class="box">clone xxxxx 复制东西
+<br></div><div class="box">clone /d/quanzhou/obj/renshen-guo
+<br></div><div class="box">clone /clone/wiz/jiuzhuan
+<br></div><div class="box">1.call武功：
+<br>call ID->set_skill(技能英文名,点数)
+例：call玫儿(meir)的基本剑法为300的用法是：
+call mier->set_skill(sword,300)
+</div><div class="box">2call右边内力: call ID->set(max_neili,5000)
+<br>call左边内力: call ID->set(neili,5000)
+</div><div class="box">3.call右边精力: call ID->set(max_jingli,1000)
+<br>call左边精力: call ID->set(jing,1000)
+</div><div class="box">4.call右边气：call ID->set(max_qi,10000)
+<br>call左边气：call ID->set(qi,10000)
+</div><div class="box">5.call经验：call ID->set(combat_exp, 100000)
+<br></div><div class="box">6.call潜能：call ID->set(potential,500)
+<br></div><div class="box">7.call悟性，膂力,根骨,身法,等只要将按上面的用法，并将双引号内改为下面字母
+<br>int str con dex
+</div><div class="box">关于call的指令
+<br>一般格式：call 对象->方法(参数）
+更改属性：call ID->set(属性名，值）
+更改武功：call ID->set_skill(武功名，值）-文件处理
+</div><div class="box">cd(目录转移)
+<br></div><div class="box">ls(列示文件)
+<br></div><div class="box">rm(删除文件)
+<br></div><div class="box">more(分页看档)
+<br></div><div class="box">cat(快速看档)
+<br></div><div class="box">tail(读文件最未几行)
+<br></div><div class="box">mv(文件搬移)
+<br></div><div class="box">mkdir(创建目录)
+<br></div><div class="box">rmdir(删除目录)
+<br></div><div class="box">edit(编辑文件)
+<br></div><div class="box">cp(复制文件)
+<br></div><div class="box">update(更新)
+<br></div><div class="box">clone(复制物品)
+<br></div><div class="box">call(修改指令)
+<br></div><div class="box">dest(清除物体)
+<br></div><div class="box">Localcmds(命令提供)
+<br></div><div class="box">ilist(物体继承)
+<br></div><div class="box">where(玩家位置)
+<br></div><div class="box">pwd(显示cwd/f)
+<br></div><div class="box">whoami(自身ID)
+<br></div><div class="box">ulist(玩家ID)
+<br></div><div class="box">nfo(物体资讯)
+<br></div><div class="box">icost(指令时间)
+<br></div><div class="box">qload(处理负担)
+<br></div><div class="box">mem(占用内存)
+<br></div><div class="box">ff(查找函数)
+<br></div><div class="box">status(资料状况)
+<br></div><div class="box">config(启动配置)
+<br></div><div class="box">mudlist(国际网路)
+<br></div><div class="box">wang(查看景物)
+<br></div><div class="box">edemote(维护emote)
+<br></div><div class="box">chinese(维护字典)
+<br></div><div class="box">promote(修改权限)
+<br></div><div class="box">wizlock(限制进入)
+<br></div><div class="box">ban(封闭地址)
+<br></div><div class="box">shutdown(马上重启)
+<br></div><div class="box">reboot(延时重新启动)
+<br></div><div class="box">snoop(窃听信息)
+<br></div><div class="box">possess(附身指令)
+<br></div><div class="box">rehash(指令更新)
+<br></div><div class="box">reclaim(清除变数)
+<br></div><div class="box">cleanup(清除散件)
+<br></div><div class="box">callouts(查callout)
+<br></div><div class="box">dump(备份状态)
+<br></div><div class="box">profile(命令描述)
+<br></div><div class="box">purge(清洗资料)
+<br></div><div class="box">goto(瞬间传送)
+<br></div><div class="box">home(回工作室)
+<br></div><div class="box">halt(中止战斗)
+<br></div><div class="box">summon(捉来生物)
+<br></div><div class="box">kickout(强制离线)
+<br></div><div class="box">smash(消灭生物)
+<br></div><div class="box">test(测试技能)
+<br></div><div class="box">full(恢复气神)
+<br></div><div class="box">巫师指令根据权限不同而有所不同各mud里面指定的指令也会有些许差别你可以根据你自己的权限，将以上指令用一下，或者使用help指令得到跟详细的帮助
+<br></div><div class="box">cd 目录名 改变当前目录到指定的目录可以用/代表根目录
+<br></div><div class="box">cd..代表上层目录
+<br></div><div class="box">config 显示本MUD的启动配置
+<br></div><div class="box">edemote [-d|-e] 表情词名编辑/显示某个emote的内容，-d参数表示删除，-e参数表示编辑(或新建)
+<br></div><div class="box">goto [-i] [ID|文件名] 将你自己传送到某个目标-i表示传送到生物的身上，否则传送到目标所在的环境
+<br></div><div class="box">home 立即回到自己的工作室前提是你有自己的工作室并放在/open/你的ID/目录下
+<br></div><div class="box">hpp [ID] 显示玩家的状态
+<br></div><div class="box">halt 停止所有与你有关的战斗
+<br></div><div class="box">ls [路径名] 列出指定目录下的文件或子目录不指定路径则列出当前目录的内容
+<br></div><div class="box">mem 查看本MUD内存使用情况
+<br></div><div class="box">mudstat 显示目前游戏的一些相关资料及状况
+<br></div><div class="box">pwd 显示你的当前工作目录(cwd)和当前工作文件(cwf)
+<br></div><div class="box">qload 显示出目前 CPU 的负担
+<br></div><div class="box">remote [-d|source] [target] 整理emote表情词使用-d参数就是删除指定的emote，否则就是把名为source的emote更名为target参数是clean all invalid emote则删除所有不合法的表情词，参数是list all emote则打印所有表情词使用这两个参数会导致游戏暂时停止响应，请慎重
+<br></div><div class="box">version 显示MudOS的版本
+<br></div><div class="box">where [ID] 显示玩家所在位置
+<br></div><div class="box">whoami 显示自己的UID和EUID
+<br></div><div class="box">cat 文件名 直接显示文件的所有内容
+<br></div><div class="box">cost 指令 测试运行某指令所耗费的时间
+<br></div><div class="box">ilist 物件或文件名 列出某物件所继承的所有物件
+<br></div><div class="box">info 物件或文件名 显示某物件的所有信息
+<br></div><div class="box">localcmds 显示当前环境下所有可以使用的命令
+<br></div><div class="box">more 文件名 分页显示文件的内容
+<br></div><div class="box">smash 生物ID 摧毁(直接杀死)某生物
+<br></div><div class="box">tail 文件名 查看某文件的末尾
+<br></div><div class="box">ulist 显示所有玩家的编号
+<br></div><div class="box">uncon 生物ID 让某生物晕倒
+<br></div><div class="box">update [文件名] 重新编译某文件，不指定文件名则便宜当前工作文件
+<br></div><div class="box">whohave id 显示携带某物品的玩家
+<br></div><div class="box">callouts [函数名] 显示即将被唤醒的某函数的物件及延迟时间不加参数显示所有的系统调用
+<br></div><div class="box">chblk [ID] 关闭某人的所有公共频道
+<br></div><div class="box">unchblk [ID] 打开某人的公共频道
+<br></div><div class="box">clone [文件名] 复制某物件，不指定文件名则复制当前工作文件所指定的物件
+<br></div><div class="box">cp 源文件 目标文件 将源文件复制到目标文件
+<br></div><div class="box">data ID 显示某物件的资料
+<br></div><div class="box">dest 物件名|文件名 把某物件从内存中消除
+<br></div><div class="box">edit 文件名 在线编辑某文件详细用法另文叙述
+<br></div><div class="box">exec ID 将某玩家踢出游戏，并禁止此IP登录一直到游戏重新启动
+<br></div><div class="box">ff <物件> <函数名称> 找出指定物件中的某个函数定义在哪一个档案里
+<br></div><div class="box">full 恢复自己的状态
+<br></div><div class="box">imprison ID 将某玩家关进监狱
+<br></div><div class="box">kickout ID 将某玩家踢出游戏
+<br></div><div class="box">mkdir 目录名 在当前目录下建立新的目录
+<br></div><div class="box">mv 源文件 目标文件 将源文件移动到目标文件，可用于文件改名
+<br></div><div class="box">reboot 重新启动游戏
+<br></div><div class="box">reclaim 将存在于内存里无用的变数清除掉, 以减少内存的使用
+<br></div><div class="box">refresh 更新所有已经完成的TASK
+<br></div><div class="box">rm 文件名 删除一个文件
+<br></div><div class="box">rmdir 目录名 删除一个空目录
+<br></div><div class="box">sameip [ID] 列出跟某玩家登录IP相同的玩家，并显示其连线地址不加参数则显示所有多重登录的玩家
+<br></div><div class="box">setlevel ID 直接设置生物的等级
+<br></div><div class="box">snoop [ID|none] 窃听某人所有信息，取消窃听用snoop none
+<br></div><div class="box">summon [ID] 将某人抓到自己所在环境
+<br></div><div class="box">ban [+|-] [IP] 不加参数显示所有被禁止登录的IP地址+表示禁止某IP登录，-表示取消禁止
+<br></div><div class="box">call <物件>-><函数>(<参数>, ...... ) 呼叫某物件身上的某个函数并传入所需参数此命令用来调试程序
+<br></div><div class="box">chinese <英文>==<中文> 指定某项技能的中文名称
+<br></div><div class="box">cleanup 文件名 对指定的物件呼叫clean_up函数，并且清除所有无环境的复制物件
+<br></div><div class="box">coor [-c|-d|-r|-a|-t|-s] x,y,z 修改房间的坐标具体用法另文叙述
+<br></div><div class="box">recoor 修改房间的坐标具体用法另文叙述
+<br></div><div class="box">promote ID (等级) 修改某人的权限等级
+<br></div><div class="box">purge 天数|ID 永久删除某玩家的档案参数是天数则删除所有指定天数内没有连线的玩家
+<br></div><div class="box">rehash 目录名 更新游戏指令列表
+<br></div><div class="box">rmchinese 英文 删除某技能的中文名称
+<br></div><div class="box">setskill ID Skill level 设定玩家某项技能的等级
+<br></div><div class="box">shutdown 立即重新启动游戏
+<br></div><div class="box">streetapp 扩展风云街的长度
+<br></div><div class="box">wizlock 权限等级 设定允许进入游戏的权限等级<br></div>
+<div class="footernow">
+<footer>
+  <p>Made with ❤ by 狐白Hubai</p>
+  <p>QQ:2703710691.</p>
+</footer>
+</div>
+</body>
