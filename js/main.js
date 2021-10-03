@@ -1,137 +1,106 @@
-/* eslint-disable node/no-unsupported-features/node-builtins */
-(function($, moment, ClipboardJS, config) {
-    $('.article img:not(".not-gallery-item")').each(function() {
-        // wrap images with link and add caption if possible
-        if ($(this).parent('a').length === 0) {
-            $(this).wrap('<a class="gallery-item" href="' + $(this).attr('src') + '"></a>');
-            if (this.alt) {
-                $(this).after('<p class="has-text-centered is-size-6 caption">' + this.alt + '</p>');
+$(document).ready(load('zhiling'));
+function load(filename){
+    if (filename == null){
+    filename = "zhiling";
+}
+    if(filename =="zhiling"){
+        document.title = "狐白Mud盒子 - 指令"
+        }
+          if(filename =="wanfa"){
+        document.title = "狐白Mud盒子 - 玩法"
+        }
+          if(filename =="emote"){
+        document.title = "狐白Mud盒子 - 表情"
+        }
+        if(filename =="tool"){
+            var _searchTop = $('#searchstr').offset().top + 30;
+            var _searchLeft = $('#searchstr').offset().left;
+    showTips("制作中 不要急", _searchTop, 3, _searchLeft);
+        }
+    $.ajax({
+	url: "./files/"+filename+".json",
+	type: "GET",
+	dataType: "json",
+	success: function(data) {
+        $("#around_div").remove();
+        $(document.body).append("<div id='around_div' class='around_div_c'></div>")
+		pageData=data;
+		for(var i=0;i<data.length;i++){         
+			addnewitem(pageData[i].title,pageData[i].description);
+		}
+   }
+})
+
+function addnewitem(title_str,scr_str) {
+    if (scr_str != null){  
+     scr_str = scr_str.replace(/\n/gm,"<br\>")
+     }
+    $("#around_div").append("<div class='itemdiv'><p class='title_p'>"+title_str+"</p><p class='scr_p'>"+scr_str+"</p>");
+};
+}
+var tipsDiv = '<div class="tipsClass"></div>';
+        $('#search_box').append(tipsDiv);
+ function showTips(tips, height, time, left) {
+            var windowWidth = document.documentElement.clientWidth;
+            $('.tipsClass').text(tips);
+            $('div.tipsClass').css({
+                'top' : height + 'px',
+                'left' : left + 'px',
+                'position' : 'absolute',
+                'padding' : '8px 6px',
+                'background' : '#000000',
+                'font-size' : 14 + 'px',
+                'font-weight' : 900,
+                'margin' : '0 auto',
+                'text-align' : 'center',
+                'width' : 'auto',
+                'color' : '#fff',
+                'border-radius' : '2px',
+                'opacity' : '0.8',
+                'box-shadow' : '0px 0px 10px #000',
+                '-moz-box-shadow' : '0px 0px 10px #000',
+                '-webkit-box-shadow' : '0px 0px 10px #000'
+            }).show();
+            setTimeout(function() {
+                $('div.tipsClass').fadeOut();
+            }, (time * 1000));
+      }
+    
+function search(){ 
+ function addnewitem(title_str,scr_str) {
+     if (scr_str != null){  
+     scr_str = scr_str.replace(/\n/gm,"<br\>")
+     }
+    $("#around_div").append("<div class='itemdiv'><p class='title_p'>"+title_str+"</p><p class='scr_p'>"+scr_str+"</p>");
+};
+
+var searchText = $('#searchstr').val();
+var _searchTop = $('#searchstr').offset().top + 30;
+            var _searchLeft = $('#searchstr').offset().left;
+            if ($.trim(searchText) == "") {
+                showTips("请输入关键字", _searchTop, 3, _searchLeft);
+                return;
             }
-        }
-    });
+            else{
+    showTips("喵呜~", _searchTop, 3, _searchLeft);
+    $("#around_div").remove();
+      $(document.body).append("<div id='around_div' class='around_div_c'></div>")
+var cunzai = 0
+    for(var i=0;i<pageData.length;i++){
+      
+			if(pageData[i].title.indexOf(searchText)!= -1||pageData[i].description.indexOf(searchText) != -1){
+             addnewitem(pageData[i].title,pageData[i].description);
+             var cunzai = 1
+		}
+   
+   }
+   if (cunzai == 1){
+       showTips("找到啦~", _searchTop, 3, _searchLeft);
+}
+else{
+    showTips("没找到喵~", _searchTop, 3, _searchLeft);
 
-    if (typeof $.fn.lightGallery === 'function') {
-        $('.article').lightGallery({ selector: '.gallery-item' });
-    }
-    if (typeof $.fn.justifiedGallery === 'function') {
-        if ($('.justified-gallery > p > .gallery-item').length) {
-            $('.justified-gallery > p > .gallery-item').unwrap();
-        }
-        $('.justified-gallery').justifiedGallery();
-    }
+}
+}
 
-    if (typeof moment === 'function') {
-        $('.article-meta time').each(function() {
-            $(this).text(moment($(this).attr('datetime')).fromNow());
-        });
-    }
-
-    $('.article > .content > table').each(function() {
-        if ($(this).width() > $(this).parent().width()) {
-            $(this).wrap('<div class="table-overflow"></div>');
-        }
-    });
-
-    function adjustNavbar() {
-        const navbarWidth = $('.navbar-main .navbar-start').outerWidth() + $('.navbar-main .navbar-end').outerWidth();
-        if ($(document).outerWidth() < navbarWidth) {
-            $('.navbar-main .navbar-menu').addClass('justify-content-start');
-        } else {
-            $('.navbar-main .navbar-menu').removeClass('justify-content-start');
-        }
-    }
-    adjustNavbar();
-    $(window).resize(adjustNavbar);
-
-    function toggleFold(codeBlock, isFolded) {
-        const $toggle = $(codeBlock).find('.fold i');
-        !isFolded ? $(codeBlock).removeClass('folded') : $(codeBlock).addClass('folded');
-        !isFolded ? $toggle.removeClass('fa-angle-right') : $toggle.removeClass('fa-angle-down');
-        !isFolded ? $toggle.addClass('fa-angle-down') : $toggle.addClass('fa-angle-right');
-    }
-
-    function createFoldButton(fold) {
-        return '<span class="fold">' + (fold === 'unfolded' ? '<i class="fas fa-angle-down"></i>' : '<i class="fas fa-angle-right"></i>') + '</span>';
-    }
-
-    $('figure.highlight table').wrap('<div class="highlight-body">');
-    if (typeof config !== 'undefined'
-        && typeof config.article !== 'undefined'
-        && typeof config.article.highlight !== 'undefined') {
-
-        $('figure.highlight').addClass('hljs');
-        $('figure.highlight .code .line span').each(function() {
-            const classes = $(this).attr('class').split(/\s+/);
-            if (classes.length === 1) {
-                $(this).addClass('hljs-' + classes[0]);
-                $(this).removeClass(classes[0]);
-            }
-        });
-
-
-        const clipboard = config.article.highlight.clipboard;
-        const fold = config.article.highlight.fold.trim();
-
-        $('figure.highlight').each(function() {
-            if ($(this).find('figcaption').length) {
-                $(this).find('figcaption').addClass('level is-mobile');
-                $(this).find('figcaption').append('<div class="level-left">');
-                $(this).find('figcaption').append('<div class="level-right">');
-                $(this).find('figcaption div.level-left').append($(this).find('figcaption').find('span'));
-                $(this).find('figcaption div.level-right').append($(this).find('figcaption').find('a'));
-            } else {
-                if (clipboard || fold) {
-                    $(this).prepend('<figcaption class="level is-mobile"><div class="level-left"></div><div class="level-right"></div></figcaption>');
-                }
-            }
-        });
-
-        if (typeof ClipboardJS !== 'undefined' && clipboard) {
-            $('figure.highlight').each(function() {
-                const id = 'code-' + Date.now() + (Math.random() * 1000 | 0);
-                const button = '<a href="javascript:;" class="copy" title="Copy" data-clipboard-target="#' + id + ' .code"><i class="fas fa-copy"></i></a>';
-                $(this).attr('id', id);
-                $(this).find('figcaption div.level-right').append(button);
-            });
-            new ClipboardJS('.highlight .copy'); // eslint-disable-line no-new
-        }
-
-        if (fold) {
-            $('figure.highlight').each(function() {
-                if ($(this).find('figcaption').find('span').length > 0) {
-                    const span = $(this).find('figcaption').find('span');
-                    if (span[0].innerText.indexOf('>folded') > -1) {
-                        span[0].innerText = span[0].innerText.replace('>folded', '');
-                        $(this).find('figcaption div.level-left').prepend(createFoldButton('folded'));
-                        toggleFold(this, true);
-                        return;
-                    }
-                }
-                $(this).find('figcaption div.level-left').prepend(createFoldButton(fold));
-                toggleFold(this, fold === 'folded');
-            });
-
-            $('figure.highlight figcaption .fold').click(function() {
-                const $code = $(this).closest('figure.highlight');
-                toggleFold($code.eq(0), !$code.hasClass('folded'));
-            });
-        }
-    }
-
-    const $toc = $('#toc');
-    if ($toc.length > 0) {
-        const $mask = $('<div>');
-        $mask.attr('id', 'toc-mask');
-
-        $('body').append($mask);
-
-        function toggleToc() { // eslint-disable-line no-inner-declarations
-            $toc.toggleClass('is-active');
-            $mask.toggleClass('is-active');
-        }
-
-        $toc.on('click', toggleToc);
-        $mask.on('click', toggleToc);
-        $('.navbar-main .catalogue').on('click', toggleToc);
-    }
-}(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings));
+}

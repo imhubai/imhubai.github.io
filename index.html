@@ -1,270 +1,34 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
-    <head>
-    <meta charset="utf-8">
+<head>
+<html lang="zh_cn">
+<meta charset="utf-8">
+<link rel="stylesheet"href="./css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>狐白Mud盒子</title>
+</head>
 
-    
-
-    <!-- 渲染优化 -->
-    <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="HandheldFriendly" content="True" >
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!--icon-->
-
-    
-    
-    
-    
-    
-
-
-    <!-- meta -->
-
-
-<title>狐白小喵屋</title>
-
-
-
-
-
-    <!-- OpenGraph -->
- 
-    <meta name="description" content="秀眉霜雪颜桃花，骨青髓绿长美好。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="狐白小喵屋">
-<meta property="og:url" content="http://imhubai.github.io/index.html">
-<meta property="og:site_name" content="狐白小喵屋">
-<meta property="og:description" content="秀眉霜雪颜桃花，骨青髓绿长美好。">
-<meta property="og:locale">
-<meta property="article:author" content="狐白Hubai">
-<meta name="twitter:card" content="summary_large_image">
-
-
-    
-<link rel="stylesheet" href="/css/style/main.css">
- 
-
-    
-    
-    
-
-    
-    
-<link rel="stylesheet" href="/css/style/dark.css">
-
-    
-<script src="/js/darkmode.js"></script>
-
-
-
-     
-
-    <!-- custom head -->
-
-<meta name="generator" content="Hexo 5.4.0"></head>
-
-    <body>
-        <div id="app">
-            <header class="header">
-    <div class="header__left">
-        <a href="/" class="button">
-            <span class="logo__text">狐白博客</span>
-        </a>
-    </div>
-    <div class="header__right">
-        
-            <div class="navbar__menus">
-                
-                    <a href="/" class="navbar-menu button">首页</a>
-                
-                    <a href="/tags/" class="navbar-menu button">标签</a>
-                
-                    <a href="/archives/" class="navbar-menu button">归档</a>
-                
-                    <a href="/friends/" class="navbar-menu button">友链</a>
-                
-                    <a href="/page/" class="navbar-menu button">Page</a>
-                
-            </div>
-        
-        
-        
-    <a href="/search/" id="btn-search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="32"><path d="M192 448c0-141.152 114.848-256 256-256s256 114.848 256 256-114.848 256-256 256-256-114.848-256-256z m710.624 409.376l-206.88-206.88A318.784 318.784 0 0 0 768 448c0-176.736-143.264-320-320-320S128 271.264 128 448s143.264 320 320 320a318.784 318.784 0 0 0 202.496-72.256l206.88 206.88 45.248-45.248z"></path></svg>
-    </a>
-
-
-        
-        
-    <a href="javaScript:void(0);" id="btn-toggle-dark">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-    </a>
-
-
-        
-            <a class="dropdown-icon button" id="btn-dropdown" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
-            <div class="dropdown-menus" id="dropdown-menus">
-                
-                    <a href="/" class="dropdown-menu button">首页</a>
-                
-                    <a href="/tags/" class="dropdown-menu button">标签</a>
-                
-                    <a href="/archives/" class="dropdown-menu button">归档</a>
-                
-                    <a href="/friends/" class="dropdown-menu button">友链</a>
-                
-                    <a href="/page/" class="dropdown-menu button">Page</a>
-                
-            </div>
-        
-    </div>
-</header>
-
-
-    <div class="cover">
-        <div class="cover__logo">
-            
-                <h1>狐白小喵屋</h1>
-            
-        </div>
-        
-        
-            <div class="cover__intro">
-                <p>此去经年，应是良辰好景虚设。</p>
- 
-            </div>
-        
-    </div>
-
-            <main class="main">
-    
-    <div class="post-list">
-        
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Hello World
-    </h2>
-    
+<body>
+    <div class="topdiv">
+<div class="top">
+    <img class="logoimg" src="pic/logo.gif">
+    <h1 class="headtitle">狐白Mud盒子</h1>
+    <ul class="list">
+<li><button class="topbtn" id="zhiling" onclick="load('zhiling')">指令</button></li>
+<li><button class="topbtn" id="wanfa" onclick="load('wanfa')">玩法</button></li>
+<li><button class="topbtn" id="emote" onclick="load('emote')">表情</button></li>
+<li><button class="topbtn" id="tool" onclick="load('tool')">工具</button></li>
+</ul>
 </div>
-<div class="post-entry__meta">
-    <a href="/archives/2021/09/" class="post-meta__date button">2021-09-13</a>
-    
- 
-</div>
-<div class="post-entry__tags"></div> 
-<a href="/2021/09/13/hello-world/" class="post-entry__link">Hello World</a>
-                </div>
-            
-        
-    </div>
-    
-
-
-</main>
-
-            <footer class="footer">
-     
-    <a href="#" class="button" id="b2t" aria-label="Back to Top" title="Back to Top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="32" height="32">
-            <path d="M233.376 722.752L278.624 768 512 534.624 745.376 768l45.248-45.248L512 444.128zM192 352h640V288H192z" fill="currentColor"></path>
-        </svg>
-    </a>
-
-    
-
-
-    
-     
- 
-
- 
-    
-        
-        <p class="footer-copyright">
-            Copyright © 2021&nbsp;-&nbsp;2021 <a href="/">狐白小喵屋</a>
-        </p>
-    
-    
-    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
-</footer>
-
+<div class="search" id="search_box">
+            <input class="textbox" id="searchstr" type="text" placeholder="搜索本页" name="searchstr" value="" />
+            <button id="search_btn" onclick="search()"><i>搜索</i></button>
+            <a href="https://jq.qq.com/?_wv=1027&k=uGZ3uZt4" target="_blank">黎明MUD</a>
         </div>
-         
+</div>
 
- 
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
- 
-
- 
-
- 
-
-
-
- 
-
-
-
- 
-
-
-    
- 
-
-
-    
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css">
-
-    
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.js"></script>
-
-    <script>
-        let lazyloadT = Boolean('false'),
-            auto_fancybox = Boolean('false')
-        if (auto_fancybox) {
-            $(".post__content").find('img').each(function () {
-                var element = document.createElement("a");
-                $(element).attr("data-fancybox", "gallery");
-                $(element).attr("href", $(this).attr("src"));
-                if (lazyloadT) {
-                    $(element).attr("href", $(this).attr("data-srcset"));
-                }
-                $(this).wrap(element);
-            });
-        } else {
-            $(".post__content").find("fancybox").find('img').each(function () {
-                var element = document.createElement("a");
-                $(element).attr("data-fancybox", "gallery");
-                $(element).attr("href", $(this).attr("src"));
-                if (lazyloadT) {
-                    $(element).attr("href", $(this).attr("data-srcset"));
-                }
-                $(this).wrap(element);
-            });
-        }
-    </script>
- 
-
- 
-
- 
-
- 
-
- 
-
-
-
-
-    </body>
+<script src="/js/main.js">
+</script>	
+   </body>
 </html>

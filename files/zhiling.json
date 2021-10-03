@@ -1,0 +1,980 @@
+[
+    {
+        "title": "help",
+        "description": "查询指令",
+        "warn": ""
+    },
+    {
+        "title": "help here",
+        "description": "可以查看当前地图",
+        "warn": ""
+    },
+    {
+        "title": "help",
+        "description": "查询指令",
+        "warn": ""
+    },
+    {
+        "title": "help cmds/cmds2",
+        "description": "可以查看本游戏的指令集",
+        "warn": ""
+    },
+    {
+        "title": "hp",
+        "description": "显示你的精, 气, 神, 属性, 各种上限等数值\n指令格式：hp, hp -m, hp -g, hp -s",
+        "warn": ""
+    },
+    {
+        "title": "sc/score",
+        "description": "显示你的基本资料可缩写为sc",
+        "warn": ""
+    },
+    {
+        "title": "stats",
+        "description": "显示你的附加属性效果",
+        "warn": ""
+    },
+    {
+        "title": "buff",
+        "description": "显示你现在拥有的附加状态",
+        "warn": ""
+    },
+    {
+        "title": "title",
+        "description": "显示你目前的阶级和头衔",
+        "warn": ""
+    },
+    {
+        "title": "i",
+        "description": "列出你目前身上所携带的所有物品",
+        "warn": ""
+    },
+    {
+        "title": "id",
+        "description": "显示你的身上或者环境物品的英文名称及名字\n如id, id here",
+        "warn": ""
+    },
+    {
+        "title": "cha/skills",
+        "description": "让你查询所学过的技能也可使用 skills",
+        "warn": ""
+    },
+    {
+        "title": "special",
+        "description": "查看特技，如果运用特技需加上参数\n如：special hatred，运用杀气",
+        "warn": ""
+    },
+    {
+        "title": "shop",
+        "description": "商城指令",
+        "warn": ""
+    },
+    {
+        "title": "member",
+        "description": "会员指令",
+        "warn": ""
+    },
+    {
+        "title": "pingjia",
+        "description": "为当期新人导师工作打分评价",
+        "warn": ""
+    },
+    {
+        "title": "who",
+        "description": "可以列出所有在线上的玩家",
+        "warn": ""
+    },
+    {
+        "title": "finger",
+        "description": "显示线上某玩家资料",
+        "warn": ""
+    },
+    {
+        "title": "l/look",
+        "description": "查看你所在的环境、某件物品、生物、或是方向",
+        "warn": ""
+    },
+    {
+        "title": "combat",
+        "description": "查看江湖上所有武功各种参数值",
+        "warn": ""
+    },
+    {
+        "title": "cmd",
+        "description": "让随从使用指令\n如: cmd chat",
+        "warn": ""
+    },
+    {
+        "title": "topten",
+        "description": "查看游戏中各种榜单. \n如topten turen",
+        "warn": ""
+    },
+    {
+        "title": "csk",
+        "description": "检查指定的某种技能或技能的特性, 绝招. \n如csk dugu-jiujian",
+        "warn": ""
+    },
+    {
+        "title": "news",
+        "description": "阅读游戏新闻",
+        "warn": ""
+    },
+    {
+        "title": "grep",
+        "description": "在新闻, 帮助系统中搜索指定查找的内容",
+        "warn": ""
+    },
+    {
+        "title": "femote",
+        "description": "根据关键字查找表情动词\nfemote 你好 查看本游戏的表情指令中含有“你好”的表情",
+        "warn": ""
+    },
+    {
+        "title": "time",
+        "description": "查看服务器的北京时间，游戏已运行时间，武林时间",
+        "warn": ""
+    },
+    {
+        "title": "color",
+        "description": "游戏中各种色彩的ANSI控制字元及色彩的试样,",
+        "warn": ""
+    },
+    {
+        "title": "quest",
+        "description": "查看你的帮派任务,门派任务,独孤任务信息",
+        "warn": ""
+    },
+    {
+        "title": "quest5",
+        "description": "查看你的郭靖任务信息, 军功情况",
+        "warn": ""
+    },
+    {
+        "title": "wartime",
+        "description": "查看王朝任务(kingwar)进行时间, 战争贡献点数",
+        "warn": ""
+    },
+    {
+        "title": "mazemap",
+        "description": "查看迷宫地图, 迷宫存在时间",
+        "warn": ""
+    },
+    {
+        "title": "mazequest",
+        "description": "查看迷宫任务进度, 及副本BOSS进行进度",
+        "warn": ""
+    },
+    {
+        "title": "tasks",
+        "description": "查看目前的所有使命",
+        "warn": ""
+    },
+    {
+        "title": "locate",
+        "description": "查看使命(task)物品的大概位置",
+        "warn": ""
+    },
+    {
+        "title": "pkd",
+        "description": "查看目前在屠人场中人物",
+        "warn": ""
+    },
+    {
+        "title": "fenpei",
+        "description": "将人物等级升级获取的技能点数分配为后天属性. \n如fenpei 膂力 1",
+        "warn": ""
+    },
+    {
+        "title": "nick",
+        "description": "为自己取一个响亮的名号或头衔或取消绰号，可以使用颜色符号",
+        "warn": ""
+    },
+    {
+        "title": "changeinfo",
+        "description": "为中文名称, 英文id 增加颜色",
+        "warn": ""
+    },
+    {
+        "title": "describe",
+        "description": "对自己的描述说明别人look 你可以看到",
+        "warn": ""
+    },
+    {
+        "title": "passwd",
+        "description": "修改你的人物密码",
+        "warn": ""
+    },
+    {
+        "title": "alias",
+        "description": "为人物定义命令的缩写\n如alias ea eat gan liang, 给eat gan liang定义缩写指令ea",
+        "warn": ""
+    },
+    {
+        "title": "do",
+        "description": "串连指令",
+        "warn": ""
+    },
+    {
+        "title": "set",
+        "description": "设定一些环境变数，请见help settings",
+        "warn": ""
+    },
+    {
+        "title": "unset",
+        "description": "删除环境变数的设定",
+        "warn": ""
+    },
+    {
+        "title": "wimpy",
+        "description": "设定当战斗中「气」剩下百分之多少时，自动「逃跑」",
+        "warn": ""
+    },
+    {
+        "title": "chat",
+        "description": "公开频道发送信息, 全游戏人都可看到.\n其他还有匿名公开发送rumor, 帮派频道party等\n频道详情help channels",
+        "warn": ""
+    },
+    {
+        "title": "chat*",
+        "description": "发送表情动词 chat* id",
+        "warn": ""
+    },
+    {
+        "title": "ask",
+        "description": "打听，解谜\n指令格式: ask <someone> about <something>",
+        "warn": ""
+    },
+    {
+        "title": "answer",
+        "description": "刚才用 ask 和你说话的使用者说话",
+        "warn": ""
+    },
+    {
+        "title": "whisper",
+        "description": "用来和同一房间中的人耳语别人无法看到内容",
+        "warn": ""
+    },
+    {
+        "title": "tell",
+        "description": "和其他房间的使用者说话",
+        "warn": ""
+    },
+    {
+        "title": "beep",
+        "description": "呼叫某人，你想呼叫的人的音箱内便会有提示音发出",
+        "warn": ""
+    },
+    {
+        "title": "waitback",
+        "description": "等待发呆中的使用者，直到该使用者开始活动时通知您",
+        "warn": ""
+    },
+    {
+        "title": "msg",
+        "description": "给某人(不在线上)留言",
+        "warn": ""
+    },
+    {
+        "title": "sos",
+        "description": "在系统出现bug时来向巫师求助",
+        "warn": ""
+    },
+    {
+        "title": "quit",
+        "description": "暂时离开游戏",
+        "warn": ""
+    },
+    {
+        "title": "suicide -f",
+        "description": "当前用户自杀删除角色资料",
+        "warn": ""
+    },
+    {
+        "title": "join turen",
+        "description": "异地报名参加屠人大赛, 当然得屠人大赛举行时才可用",
+        "warn": ""
+    },
+    {
+        "title": "join kingwar",
+        "description": "异地报名参加王朝战争, 当然得在王朝战争进行时才可用",
+        "warn": ""
+    },
+    {
+        "title": "list",
+        "description": "查看贩售物品列表",
+        "warn": ""
+    },
+    {
+        "title": "buy",
+        "description": "购买物品",
+        "warn": ""
+    },
+    {
+        "title": "eat",
+        "description": "吃食物, 药物",
+        "warn": ""
+    },
+    {
+        "title": "drink",
+        "description": "喝容器里面的液体",
+        "warn": ""
+    },
+    {
+        "title": "get",
+        "description": "让你捡起地上或容器内的某样物品",
+        "warn": ""
+    },
+    {
+        "title": "drop",
+        "description": "让你丢下你所携带的物品",
+        "warn": ""
+    },
+    {
+        "title": "put",
+        "description": "将某样物品放进一个容器",
+        "warn": ""
+    },
+    {
+        "title": "give",
+        "description": "让你将某样物品给别人",
+        "warn": ""
+    },
+    {
+        "title": "wield",
+        "description": "装备某件物品作武器",
+        "warn": ""
+    },
+    {
+        "title": "unwield",
+        "description": "放下手中的武器",
+        "warn": ""
+    },
+    {
+        "title": "wear",
+        "description": "装备某件防具",
+        "warn": ""
+    },
+    {
+        "title": "remove",
+        "description": "脱掉身上某件防具",
+        "warn": ""
+    },
+    {
+        "title": "hand",
+        "description": "将某件物品拿在手上，以备他用, 如暗器",
+        "warn": ""
+    },
+    {
+        "title": "purchase",
+        "description": "求购另外一个玩家身上的物品\n这个物品必须是拿(hand)在手里的",
+        "warn": ""
+    },
+    {
+        "title": "halt",
+        "description": "停止战斗、打坐、吐纳、汲取等",
+        "warn": ""
+    },
+    {
+        "title": "sleep",
+        "description": "睡觉在可以睡觉的地方睡觉，恢复体力",
+        "warn": ""
+    },
+    {
+        "title": "fill",
+        "description": "在有水的地方把容器灌满清水\n比如扬州茶馆fill shui dai可以把你身上的水袋装满水",
+        "warn": ""
+    },
+    {
+        "title": "cut",
+        "description": "从某样东西上面割下一样东西\n如：cut head from corpse",
+        "warn": ""
+    },
+    {
+        "title": "cook",
+        "description": "做饭需要学习过基本厨艺和川菜技艺并激发，身上有菜料",
+        "warn": ""
+    },
+    {
+        "title": "make",
+        "description": "炼制某样药品, 首先需要你会炼制这样药物",
+        "warn": ""
+    },
+    {
+        "title": "lured",
+        "description": "放置诱饵打猎",
+        "warn": ""
+    },
+    {
+        "title": "makelove",
+        "description": "和某人做爱",
+        "warn": ""
+    },
+    {
+        "title": "paimai",
+        "description": "物品拍卖",
+        "warn": ""
+    },
+    {
+        "title": "team",
+        "description": "队伍指令\n如: team with <某人> 跟某人组成队伍\nteam dismiss.离开队伍",
+        "warn": ""
+    },
+    {
+        "title": "follow",
+        "description": "跟随某人或生物\nfollow none 停止跟随",
+        "warn": ""
+    },
+    {
+        "title": "zhaohuan",
+        "description": "把你的魔幻兽召唤过来，并骑上",
+        "warn": ""
+    },
+    {
+        "title": "rideto",
+        "description": "骑动物瞬移至指定地点",
+        "warn": ""
+    },
+    {
+        "title": "open",
+        "description": "可以让你打开门",
+        "warn": ""
+    },
+    {
+        "title": "close",
+        "description": "克里斯关下门",
+        "warn": ""
+    },
+    {
+        "title": "souxun",
+        "description": "在地上寻找东西如使命(task)物品",
+        "warn": ""
+    },
+    {
+        "title": "summon",
+        "description": "召唤自己的物品",
+        "warn": ""
+    },
+    {
+        "title": "summon",
+        "description": "查看召唤列表",
+        "warn": ""
+    },
+    {
+        "title": "hide",
+        "description": "隐藏自己的物品\n必须是自己可以summon的才可以隐藏, 并且求抓取id与物品id一致",
+        "warn": ""
+    },
+    {
+        "title": "touch",
+        "description": "触摸一件道具\ntouch你的十级兵器可以恢复内力",
+        "warn": ""
+    },
+    {
+        "title": "stab",
+        "description": "将一件兵器插在地上",
+        "warn": ""
+    },
+    {
+        "title": "miss",
+        "description": "追寻自己插在地上的十级兵器，可以瞬间到达该物品所在地",
+        "warn": ""
+    },
+    {
+        "title": "aim",
+        "description": "使用导弹瞄准某人\n  aim 某人ID\n  使用launch 导弹ID 发射",
+        "warn": ""
+    },
+    {
+        "title": "launch",
+        "description": "发射已瞄准的导弹\nlaunch 导弹ID",
+        "warn": ""
+    },
+    {
+        "title": "enchase",
+        "description": "把一个特殊镶嵌物镶嵌到装备中去",
+        "warn": ""
+    },
+    {
+        "title": "unenchase可将镶嵌在普通自造装备上的宝石取出",
+        "warn": ""
+    },
+    {
+        "title": "combine",
+        "description": "合并物品，生成新的物品\n如: combine red gem1 & red gem1 2 & red gem1 3  ",
+        "warn": ""
+    },
+    {
+        "title": "fuse",
+        "description": "将石头类物品熔化\n每次熔炼都会增加一定数量的灵慧，但是会消耗一点最大内力",
+        "warn": ""
+    },
+    {
+        "title": "resolve",
+        "description": "将动态装备分解\n每次分解都会增加一定数量的灵慧，但是会消耗一点最大内力",
+        "warn": ""
+    },
+    {
+        "title": "bunch",
+        "description": "帮派管理指令\n详情help bunch",
+        "warn": ""
+    },
+    {
+        "title": "area",
+        "description": "帮派地盘指令\n详情help area",
+        "warn": ""
+    },
+    {
+        "title": "brothers",
+        "description": "兄弟结拜、绝交、查看兄弟信息",
+        "warn": ""
+    },
+    {
+        "title": "engage",
+        "description": "求婚, 对方答应即为私奔\n如果想举行正式婚礼, help marry",
+        "warn": ""
+    },
+    {
+        "title": "divorce",
+        "description": "单方面离婚",
+        "warn": ""
+    },
+    {
+        "title": "bai",
+        "description": "让你拜某人为师",
+        "warn": ""
+    },
+    {
+        "title": "shou",
+        "description": "让某人收你为徒, 玩家不可收人为徒",
+        "warn": ""
+    },
+    {
+        "title": "tuoli",
+        "description": "向你的师傅请求脱离师门\n将会受到特殊武学被追回的严重惩罚\n惩罚规则见help tuoli",
+        "warn": ""
+    },
+    {
+        "title": "kaichu",
+        "description": "将弟子逐出师门, 弟子技能损失同tuoli",
+        "warn": ""
+    },
+    {
+        "title": "huansu",
+        "description": "还俗，不做和尚尼姑小喇嘛了, 必须脱离门派后使用",
+        "warn": ""
+    },
+    {
+        "title": "teach",
+        "description": "教随从技能",
+        "warn": ""
+    },
+    {
+        "title": "du",
+        "description": "通过阅读秘笈或其他物品自学某些技巧",
+        "warn": ""
+    },
+    {
+        "title": "xue",
+        "description": "你向别人请教有关某一种技能的疑难问题\n如: xue lao jiugui force",
+        "warn": ""
+    },
+    {
+        "title": "lian",
+        "description": "练习某个种类的技能. 如lian sword, 必须首先激发特殊剑法为基本剑法",
+        "warn": ""
+    },
+    {
+        "title": "yanjiu",
+        "description": "你对某一种技能进行研究",
+        "warn": ""
+    },
+    {
+        "title": "jiqu",
+        "description": "汲取实战体会，以提升自己的武学修养\n可装备剑jiqu sword-cognize获取剑道修养, 停止指令halt",
+        "warn": ""
+    },
+    {
+        "title": "yanlian",
+        "description": "可以让你将某些武功合而为一，成为一种新技能\n如六脉神剑, 降龙十八掌",
+        "warn": ""
+    },
+    {
+        "title": "closed",
+        "description": "大宗师可以用这条指令进行闭关修炼",
+        "warn": ""
+    },
+    {
+        "title": "breakup",
+        "description": "进行炼气修炼\n详情help closed",
+        "warn": ""
+    },
+    {
+        "title": "animaout",
+        "description": "进行炼神修炼\n详情help closed",
+        "warn": ""
+    },
+    {
+        "title": "scheme",
+        "description": "计划练功, 内容需自行设置\nhelp schedule",
+        "warn": ""
+    },
+    {
+        "title": "reflect",
+        "description": "会员可以在计划时使用以提高少量经验和潜能",
+        "warn": ""
+    },
+    {
+        "title": "fangqi",
+        "description": "放弃一项你所学过的技能到某个级别",
+        "warn": ""
+    },
+    {
+        "title": "dazuo",
+        "description": "打坐，运气练功，将气转为内力\n如: dazuo 10, 必须首先激发特殊内功为基本内功",
+        "warn": ""
+    },
+    {
+        "title": "tuna",
+        "description": "打坐修行，将你的精转变成精力\n如: tuna 10, 必须首先激发特殊内功为基本内功",
+        "warn": ""
+    },
+    {
+        "title": "jifa",
+        "description": "指定所要用的技能，需指明技能种类和技能名称\n如jifa sword taiji-jian",
+        "warn": ""
+    },
+    {
+        "title": "bei",
+        "description": "指定所要用的空手技能\n空手特殊技能使用之前必须先bei",
+        "warn": ""
+    },
+    {
+        "title": "jiali",
+        "description": "指定每次击中敌人时，要发出几点内力伤敌\njiali越高伤害越高，消耗内力也越多\n可jiali max",
+        "warn": ""
+    },
+    {
+        "title": "fight",
+        "description": "让你向一个人物「讨教」或者是「切磋武艺」",
+        "warn": ""
+    },
+    {
+        "title": "hit",
+        "description": "直接向一个人物「进招」",
+        "warn": ""
+    },
+    {
+        "title": "kill",
+        "description": "你主动开始攻击一个人物，并且试图杀死对方",
+        "warn": ""
+    },
+    {
+        "title": "touxi",
+        "description": "向敌人偷袭偷袭不成时，则会招至反击",
+        "warn": ""
+    },
+    {
+        "title": "ansuan",
+        "description": "暗算位于<方向>的<人物>",
+        "warn": ""
+    },
+    {
+        "title": "exert",
+        "description": "用内力进行一些特异功能help force查看通用, 必须首先激发特殊内功为基本内功, 也可使用 yun",
+        "warn": ""
+    },
+    {
+        "title": "perform",
+        "description": "使用你所学的外功的一些特殊的攻击方式或招式（绝招）如: perform sword.chan, 也可使用 yong, \n可csk 武功, 查看可以使用的绝招",
+        "warn": ""
+    },
+    {
+        "title": "cls",
+        "description": "清客户端屏幕",
+        "warn": ""
+    },
+    {
+        "title": "hatred",
+        "description": "显示自己所在的门派的仇恨对象和程度",
+        "warn": ""
+    },
+    {
+        "title": "bjtime",
+        "description": "服务器的北京时间",
+        "warn": ""
+    },
+    {
+        "title": "uptime",
+        "description": "告诉您该mud游戏已经连续执行了多久",
+        "warn": ""
+    },
+    {
+        "title": "mudlist",
+        "description": "查看目前跟这个 Mud 取得联系中的其他 Mud",
+        "warn": ""
+    },
+    {
+        "title": "wizlist",
+        "description": "列出目前所有的巫师名单",
+        "warn": ""
+    },
+    {
+        "title": "semote",
+        "description": "列出目前所能使用的表情",
+        "warn": ""
+    },
+    {
+        "title": "emote",
+        "description": "表达一个系统没有预设的动作词如emote 坐下",
+        "warn": ""
+    },
+    {
+        "title": "tune",
+        "description": "关闭收听信息频道, 打开收听信息频道你可以用 help channels 查询目\n前有哪些频道可以收听",
+        "warn": ""
+    },
+    {
+        "title": "save",
+        "description": "修改存盘地点系统每隔一段时间自动保存玩家资料",
+        "warn": ""
+    },
+    {
+        "title": "baitan",
+        "description": "摆摊设点，兜售货物需要先在襄阳黄真处加入商业协会",
+        "warn": ""
+    },
+    {
+        "title": "map",
+        "description": "绘制地图",
+        "warn": ""
+    },
+    {
+        "title": "guard",
+        "description": "守护命令",
+        "warn": ""
+    },
+    {
+        "title": "push",
+        "description": "将他人推开",
+        "warn": ""
+    },
+    {
+        "title": "right",
+        "description": "同意某人提出的要求",
+        "warn": ""
+    },
+    {
+        "title": "refuse",
+        "description": "拒绝某人提出的要求",
+        "warn": ""
+    },
+    {
+        "title": "pour",
+        "description": "将某样毒品下到一个容器中的饮食中",
+        "warn": ""
+    },
+    {
+        "title": "drug",
+        "description": "在食物里面下毒",
+        "warn": ""
+    },
+    {
+        "title": "daub",
+        "description": "在身上、武器、防具上面涂抹东西, 比如毒药",
+        "warn": ""
+    },
+    {
+        "title": "wash",
+        "description": "洗手，物品、防具可以让你将武器、防具好好冲洗一下，清除上面的毒",
+        "warn": ""
+    },
+    {
+        "title": "san",
+        "description": "升级十级武器用指令，使一个物品圣化以激发它的潜能",
+        "warn": ""
+    },
+    {
+        "title": "imbue",
+        "description": "升级十级武器用指令，将一个物品浸入到另一个物品中",
+        "warn": ""
+    },
+    {
+        "title": "accept",
+        "description": "接收来自故事的挑战者的挑战",
+        "warn": ""
+    },
+    {
+        "title": "apply",
+        "description": "使用一个物品，发挥它的功效，比如战斗中施用烟雾弹可制造混乱趁机逃跑\n长安杂货店有售",
+        "warn": ""
+    },
+    {
+        "title": "steal",
+        "description": "偷他人身上的东西成功了, 当然你就能获得该样物品可是, 马有失蹄, \n人总有失风的时候, 当你失败时当然就得付出代价",
+        "warn": ""
+    },
+    {
+        "title": "beg",
+        "description": "只有学了叫花绝活的丐帮弟子可以使用此指令，乞讨",
+        "warn": ""
+    },
+    {
+        "title": "check",
+        "description": "只有学了道听途说的丐帮弟子可以使用此指令，打听别人所学过的技能",
+        "warn": ""
+    },
+    {
+        "title": "persuade",
+        "description": "劝架峨嵋弟子专用可对在战斗中的人使用，若成功可以让双方停止战斗",
+        "warn": ""
+    },
+    {
+        "title": "qi | ride",
+        "description": "你骑上代步的的动物",
+        "warn": ""
+    },
+    {
+        "title": "xia | unride",
+        "description": "让你从骑着的动物上跳下来有些地方骑在马上不能进入",
+        "warn": ""
+    },
+    {
+        "title": "train",
+        "description": "驯化某动物",
+        "warn": ""
+    },
+    {
+        "title": "come",
+        "description": "让动物跟随主人行动",
+        "warn": ""
+    },
+    {
+        "title": "attack",
+        "description": "让动物攻击敌人",
+        "warn": ""
+    },
+    {
+        "title": "stop",
+        "description": "让动物停止对人的攻击 ",
+        "warn": ""
+    },
+    {
+        "title": "stay",
+        "description": "停止动物的跟随状态 ",
+        "warn": ""
+    },
+    {
+        "title": "release",
+        "description": "结束主奴状态，将动物放离",
+        "warn": ""
+    },
+    {
+        "title": "exert recover",
+        "description": "消耗内力回血",
+        "warn": ""
+    },
+    {
+        "title": "exert regenerate",
+        "description": "消耗内力回精神",
+        "warn": ""
+    },
+    {
+        "title": "exert dispel",
+        "description": "内力疗疾，疗毒等",
+        "warn": ""
+    },
+    {
+        "title": "exert lifeheal",
+        "description": "为他人疗伤，后面得跟人物ID",
+        "warn": ""
+    },
+    {
+        "title": "exert heal",
+        "description": "为自己疗伤（恢复血上限）",
+        "warn": ""
+    },
+    {
+        "title": "exert dispel abc",
+        "description": "为id为abc的人物疗疾或驱毒",
+        "warn": ""
+    },
+    {
+        "title": "dazuo XXX 1",
+        "description": "消耗XXX气血打坐一次",
+        "warn": ""
+    },
+    {
+        "title": "tuna XXX 1",
+        "description": "消耗XXX精神吐纳",
+        "warn": ""
+    },
+    {
+        "title": "get XXX",
+        "description": "拾取地上id为XXX的物品",
+        "warn": ""
+    },
+    {
+        "title": "du XXX with 次数",
+        "description": "读id为XXX的书本多少次",
+        "warn": ""
+    },
+    {
+        "title": "accept quest",
+        "description": "接受信件的任务",
+        "warn": ""
+    },
+    {
+        "title": "use ba gua",
+        "description": "用八卦",
+        "warn": ""
+    },
+    {
+        "title": "wield XX",
+        "description": "穿戴id为XXX的装备",
+        "warn": ""
+    },
+    {
+        "title": "unwield XX",
+        "description": "脱下id为XXX的装备",
+        "warn": ""
+    },
+    {
+        "title": "少林门口广场进伏魔圈",
+        "description": "west\nwest\nsouth\neast\nsouth\neast\nnorth\nnorth\neast\nwest\nsouth\nenter\nask du jie about 金刚罩\nask du e about 伏魔杖\nask du nan about 菩提子",
+        "warn": ""
+    },
+    {
+        "title": "少林拿易筋经",
+        "description": "xian 一\nxian 梦\nxian 如 3\nxian 是\nget jing from hole",
+        "warn": ""
+    },
+    {
+        "title": "拿乾坤大挪移",
+        "description": "\nw\nw\nwu\nwu\nw\nw\nenter\nbreak men\nenter\nn\nopen north\nn\nopen north\nn\nopen north\nn\nketou\nget qiankun book",
+        "warn": ""
+    },
+    {
+        "description": "n\nn\nn\nn\nnw\nn\nne\ne\ns\ns\ns\ne\ns\ns\nw\ns\ns\ns\ns\ns\ns",
+        "warn": ""
+    },
+    {
+        "title": "扬州青竹林",
+        "description": "e\ne\ne\ne\nn\ne\nn\nw\nn\ne\nn\nw\nn\nenter",
+        "warn": ""
+    },
+    {
+        "title": "灵鹫拿书",
+        "description": "zou tiesuo\neu\nn\nn\nn\nn\nn\nmove jiashan\nenter\nnd\nnd\ned\nn\nn\nn\nn\nn\ne\nn\nw\nw",
+        "warn": ""
+    },
+    {
+        "title": "梅庄",
+        "description": "n\nsw\nw\nsw\nnw\nsw\nwu\nn\nn\nknock 4\nknock 2\nknock 5\nknock 3\nn\nn\nn\nn\ne\ns\ns\nw\nsw\ne\ns\neu\nn\nn",
+        "warn": ""
+    },
+    {
+        "title": "万劫谷",
+        "description": "n\nn\nn\nn\nn\nn\nn\nnw\nnd\nw\nw\nw\nwu\nsu\nwu\nwd\nnd\nw\nPUSHaside grass\nenter\npull ring\nenter\nn\nout\nknock duan\nn",
+        "warn": ""
+    }
+]
