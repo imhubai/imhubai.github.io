@@ -1,5 +1,7 @@
 $(document).ready(load('zhiling'));
 function load(filename){
+    showTips("加载中...", _searchTop, 3, _searchLeft);
+
     if (filename == null){
     filename = "zhiling";
 }
@@ -12,11 +14,13 @@ function load(filename){
           if(filename =="emote"){
         document.title = "狐白Mud盒子 - 表情"
         }
+        
         if(filename =="tool"){
             var _searchTop = $('#searchstr').offset().top + 30;
             var _searchLeft = $('#searchstr').offset().left;
     showTips("制作中 不要急", _searchTop, 3, _searchLeft);
         }
+    
     $.ajax({
 	url: "./files/"+filename+".json",
 	type: "GET",
