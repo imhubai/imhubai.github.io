@@ -1,0 +1,131 @@
+body
+{
+	color: #000000;
+	padding: 0px;
+    background-repeat: no-r;
+    background-attachment: fixed;
+    background: url(http://www.dmoe.cc/random.php);
+
+}
+.tip{
+    margin-bottom: 10px;
+    display: flex;
+    }
+.tiptext{
+    margin: 0;
+    }
+.card
+{
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    -webkit-border-radius:6px;
+    box-shadow: 0px 1px 5px rgba(9,20,9,0.7);
+    }
+    @media screen and (min-width: 1201px) {undefined
+
+.card {width: 80%}
+
+}
+.toptable{
+    display: flex;
+    }
+.innerTableHead1
+{
+	height:auto;
+    display: block;
+}
+.innerTableHead2
+{
+	height:auto;
+    display: line-height;
+}
+.innerTableStatus{
+    display: line-height;
+    }
+.innerTableBottom{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between; 
+margin:5px 20px 2px 20px;
+padding-bottom: 10px;
+    }
+.iTBblock{
+   display: line-height;
+       }
+.avatarimg{
+    height: 70px;
+    width: 70px;
+    margin:5px 5px 0 5px;
+    }
+.nametext{
+    margin:5px 0 5px 0;
+    font-size: 1.35em;
+    }
+.signtextA{
+    color: #5C5C5C;
+    margin:0 5px 0 0;
+    font-size: 0.9em;
+}
+.statustext{
+    margin:0 auto;
+    text-align: center;
+    font-size:0.9em;
+}
+.itext1{
+    margin: 0;
+    font-size:0.9em;
+    text-align: center;
+}
+.itext2{
+    margin: 0;
+    font-size:0.9em;
+    color:#505050;
+    text-align: center;
+}
+#signcard{
+    margin-top: 5px;
+    }
+.signbox{
+    display: flex;
+}
+.signtext{
+    margin: 3px;
+    font-size: 1em;
+    color: #000000;
+    left:0;
+}
+.btn_sign{
+    color: #1A9466;
+    background-color: #FFFFFF;
+    font-size:0.9em;
+    right:0;
+    margin-right: 10px;
+    position: absolute;
+    }
+    
+.btn {
+  padding: 4px 10px;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color .25s;
+}
+.btn:hover {
+  background-color: #DFDFDF;
+}
+.btn::after {
+  content: '';
+  background-image: radial-gradient(circle, #9C9C9C 10%, transparent 10.1%);
+  transform: scale(10);
+  opacity: 0;
+  transition: all .6s;
+}
+.btn:active::after {
+  transform: scale(0);
+  opacity: .5;
+  transition: 0s;
+}
+.loginpage{
+    
+}
