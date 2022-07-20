@@ -1,0 +1,48 @@
+<h1>minimist</h1>
+<p>parse argument options</p>
+<p>This module is the guts of optimist’s argument parser without all the<br>
+fanciful decoration.</p>
+<p><a href="http://ci.testling.com/substack/minimist"><img src="https://ci.testling.com/substack/minimist.png" alt="browser support"></a></p>
+<p><a href="http://travis-ci.org/substack/minimist"><img src="https://secure.travis-ci.org/substack/minimist.png" alt="build status"></a></p>
+<h1>example</h1>
+<pre><code class="language-js">var argv = require('minimist')(process.argv.slice(2));
+console.dir(argv);
+</code></pre>
+<pre><code>$ node example/parse.js -a beep -b boop
+{ _: [], a: 'beep', b: 'boop' }
+</code></pre>
+<pre><code>$ node example/parse.js -x 3 -y 4 -n5 -abc --beep=boop foo bar baz
+{ _: [ 'foo', 'bar', 'baz' ],
+  x: 3,
+  y: 4,
+  n: 5,
+  a: true,
+  b: true,
+  c: true,
+  beep: 'boop' }
+</code></pre>
+<h1>methods</h1>
+<pre><code class="language-js">var parseArgs = require('minimist')
+</code></pre>
+<h2 id="var-argv-parseArgs-args-opts">var argv = parseArgs(args, opts={})</h2>
+<p>Return an argument object <code>argv</code> populated with the array arguments from <code>args</code>.</p>
+<p><code>argv._</code> contains all the arguments that didn’t have an option associated with<br>
+them.</p>
+<p>Numeric-looking arguments will be returned as numbers unless <code>opts.string</code> or<br>
+<code>opts.boolean</code> is set for that argument name.</p>
+<p>Any arguments after <code>'--'</code> will not be parsed and will end up in <code>argv._</code>.</p>
+<p>options can be:</p>
+<ul>
+<li><code>opts.string</code> - a string or array of strings argument names to always treat as<br>
+strings</li>
+<li><code>opts.boolean</code> - a string or array of strings to always treat as booleans</li>
+<li><code>opts.alias</code> - an object mapping string names to strings or arrays of string<br>
+argument names to use as aliases</li>
+<li><code>opts.default</code> - an object mapping string argument names to default values</li>
+</ul>
+<h1>install</h1>
+<p>With <a href="https://npmjs.org">npm</a> do:</p>
+<pre><code>npm install minimist
+</code></pre>
+<h1>license</h1>
+<p>MIT</p>

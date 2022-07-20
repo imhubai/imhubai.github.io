@@ -1,0 +1,108 @@
+<p align="center">
+  <a href="http://ned.im/noty?ref=readme">
+    <img src="http://ned.im/noty/_media/noty-v3-logo.png" width=200 height=70>
+  </a>
+  <p align="center">
+    Dependency-free notification library.
+    <br>
+    <a href="http://ned.im/noty"><strong>Documentation &raquo;</strong></a>
+  </p>
+  <p align="center">
+    <a href="https://github.com/needim/noty/releases"><img src="https://img.shields.io/github/release/needim/noty.svg" alt="GitHub release"></a>
+    <a href="https://bower.io/"><img src="https://img.shields.io/bower/v/noty.svg" alt="Bower version"></a>
+    <a href="https://www.npmjs.com/package/noty"><img src="https://img.shields.io/npm/v/noty.svg" alt="NPM version"></a>
+    <a href="https://packagist.org/packages/needim/noty"><img src="https://img.shields.io/packagist/v/needim/noty.svg" alt="Packagist version"></a>
+    <a href="https://cdnjs.com/libraries/noty"><img src="https://img.shields.io/cdnjs/v/noty.svg" alt="CDNJS version"></a>
+    <br>
+    <img src="https://img.shields.io/david/needim/noty.svg" alt="Dependencies">
+    <img src="https://img.shields.io/david/dev/needim/noty.svg" alt="Dev Dependencies">
+    <br>
+    <a href="https://travis-ci.org/needim/noty"><img src="https://img.shields.io/travis/needim/noty/master.svg" alt="Travis"></a>
+    <a href="https://www.npmjs.com/package/noty"><img src="https://img.shields.io/npm/dm/noty.svg?label=npm%20downloads" alt="NPM Downloads"></a>
+    <a href="https://github.com/needim/noty/graphs/contributors"><img src="https://img.shields.io/github/contributors/needim/noty.svg" alt="Contributors"></a>
+  </p>
+</p>
+<br>
+<h2 id="Hi">Hi</h2>
+<p><strong>NOTY</strong> is a notification library that makes it easy to create <strong>alert</strong> - <strong>success</strong> - <strong>error</strong> - <strong>warning</strong> - <strong>information</strong> - <strong>confirmation</strong> messages as an alternative the standard alert dialog.</p>
+<p>The notifications can be positioned at the;<br>
+<strong>top</strong> - <strong>topLeft</strong> - <strong>topCenter</strong> - <strong>topRight</strong> - <strong>center</strong> - <strong>centerLeft</strong> - <strong>centerRight</strong> - <strong>bottom</strong> - <strong>bottomLeft</strong> - <strong>bottomCenter</strong> - <strong>bottomRight</strong></p>
+<p>There are lots of other options in the API to customise the text, animation, buttons and much more.</p>
+<p>It also has various callbacks for the buttons, opening closing the notifications and queue control.</p>
+<h3 id="Sponsored-By">Sponsored By</h3>
+<table>
+  <tr>
+    <td vlign="center">
+      <a target="_blank" href="https://pusher.com/?utm_source=needim&utm_medium=paid&utm_campaign=needim">
+        <img src="http://ned.im/noty/_media/pusher_logo_dark.png" width="160" alt="">
+      </a>
+    </td>
+    <td vlign="center">
+      <a target="_blank" href="https://www.jetbrains.com?ref=notyjs">
+        <img src="http://ned.im/noty/_media/logo_JetBrains_4.svg" width="80" alt="">
+      </a>
+    </td>
+    <td vlign="center">
+      <a target="_blank" href="https://www.browserstack.com?ref=notyjs">
+        <img src="http://ned.im/noty/_media/browserstack.svg" width="220" alt="">
+      </a>
+    </td>
+  </tr>
+</table>
+<hr>
+<h3 id="Features">Features</h3>
+<ul>
+<li>[x] Dependency-free</li>
+<li>[x] Web Push Notifications with Service Worker support</li>
+<li>[x] UMD</li>
+<li>[x] Named queue system</li>
+<li>[x] Has 11 layouts, 5 notification styles, 5+ themes</li>
+<li>[x] Custom container (inline notifications)</li>
+<li>[x] Confirm notifications</li>
+<li>[x] TTL</li>
+<li>[x] Progress bar indicator for timed notifications</li>
+<li>[x] Supports css animations, <a href="https://github.com/daneden/animate.css">animate.css</a>, <a href="https://github.com/legomushroom/mojs">mojs</a>, <a href="https://github.com/tictail/bounce.js">bounce.js</a>, <a href="https://github.com/julianshapiro/velocity">velocity</a> and other animation libraries</li>
+<li>[x] 2 close options: click, button</li>
+<li>[x] API &amp; Callbacks</li>
+<li>[x] Custom templating</li>
+<li>[x] Document visibility control (blur, focus)</li>
+</ul>
+<h3 id="Documentation">Documentation</h3>
+<p>Documentation and examples are here: <a href="http://ned.im/noty">http://ned.im/noty</a></p>
+<hr>
+<h5 id="Basic-Usage">Basic Usage</h5>
+<pre><code class="language-js">import Noty from 'noty';
+
+new Noty({
+    text: 'Notification text'
+}).show();
+
+// or
+
+const Noty = require('noty');
+
+new Noty({
+    text: 'Notification text'
+}).show();
+
+</code></pre>
+<h5 id="Development">Development</h5>
+<pre><code class="language-console">$ npm run dev
+$ npm test
+$ npm run build
+$ npm run browserstack
+$ npm run serve-docs
+</code></pre>
+<h5 id="Development-environment">Development environment</h5>
+<ul>
+<li>[x] Standard</li>
+<li>[x] Prettier</li>
+<li>[x] ES6 &amp; Babel &amp; Webpack</li>
+<li>[x] Sass</li>
+<li>[x] Autoprefixer</li>
+<li>[x] QUnit</li>
+<li>[x] BrowserStack</li>
+<li>[x] Pre-commit tests</li>
+<li>[x] Travis CI</li>
+</ul>
+<p><a href="https://github.com/feross/standard"><img src="https://cdn.rawgit.com/feross/standard/master/badge.svg" alt="JavaScript Style Guide"></a></p>

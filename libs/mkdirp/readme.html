@@ -1,0 +1,63 @@
+<h1>mkdirp</h1>
+<p>Like <code>mkdir -p</code>, but in node.js!</p>
+<p><a href="http://travis-ci.org/substack/node-mkdirp"><img src="https://secure.travis-ci.org/substack/node-mkdirp.png" alt="build status"></a></p>
+<h1>example</h1>
+<h2 id="pow-js">pow.js</h2>
+<pre><code class="language-js">var mkdirp = require('mkdirp');
+    
+mkdirp('/tmp/foo/bar/baz', function (err) {
+    if (err) console.error(err)
+    else console.log('pow!')
+});
+</code></pre>
+<p>Output</p>
+<pre><code>pow!
+</code></pre>
+<p>And now /tmp/foo/bar/baz exists, huzzah!</p>
+<h1>methods</h1>
+<pre><code class="language-js">var mkdirp = require('mkdirp');
+</code></pre>
+<h2 id="mkdirp-dir-opts-cb">mkdirp(dir, opts, cb)</h2>
+<p>Create a new directory and any necessary subdirectories at <code>dir</code> with octal<br>
+permission string <code>opts.mode</code>. If <code>opts</code> is a non-object, it will be treated as<br>
+the <code>opts.mode</code>.</p>
+<p>If <code>opts.mode</code> isn’t specified, it defaults to <code>0777 &amp; (~process.umask())</code>.</p>
+<p><code>cb(err, made)</code> fires with the error or the first directory <code>made</code><br>
+that had to be created, if any.</p>
+<p>You can optionally pass in an alternate <code>fs</code> implementation by passing in<br>
+<code>opts.fs</code>. Your implementation should have <code>opts.fs.mkdir(path, mode, cb)</code> and<br>
+<code>opts.fs.stat(path, cb)</code>.</p>
+<h2 id="mkdirp-sync-dir-opts">mkdirp.sync(dir, opts)</h2>
+<p>Synchronously create a new directory and any necessary subdirectories at <code>dir</code><br>
+with octal permission string <code>opts.mode</code>. If <code>opts</code> is a non-object, it will be<br>
+treated as the <code>opts.mode</code>.</p>
+<p>If <code>opts.mode</code> isn’t specified, it defaults to <code>0777 &amp; (~process.umask())</code>.</p>
+<p>Returns the first directory that had to be created, if any.</p>
+<p>You can optionally pass in an alternate <code>fs</code> implementation by passing in<br>
+<code>opts.fs</code>. Your implementation should have <code>opts.fs.mkdirSync(path, mode)</code> and<br>
+<code>opts.fs.statSync(path)</code>.</p>
+<h1>usage</h1>
+<p>This package also ships with a <code>mkdirp</code> command.</p>
+<pre><code>usage: mkdirp [DIR1,DIR2..] {OPTIONS}
+
+  Create each supplied directory including any necessary parent directories that
+  don't yet exist.
+  
+  If the directory already exists, do nothing.
+
+OPTIONS are:
+
+  -m, --mode   If a directory needs to be created, set the mode as an octal
+               permission string.
+
+</code></pre>
+<h1>install</h1>
+<p>With <a href="http://npmjs.org">npm</a> do:</p>
+<pre><code>npm install mkdirp
+</code></pre>
+<p>to get the library, or</p>
+<pre><code>npm install -g mkdirp
+</code></pre>
+<p>to get the command.</p>
+<h1>license</h1>
+<p>MIT</p>
