@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>【题解】PTA-L1-7 分寝室 | 狐公子</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://www.hugongzi.top/favicon.ico?v=1710990080871">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://www.hugongzi.top/styles/main.css">
+
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://www.hugongzi.top">狐公子</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>【题解】PTA-L1-7 分寝室</h1>
+            <p class="article-meta">
+              2024-03-21
+              
+            </p>
+            
+            <div class="post-content" v-pre>
+              <h1 id="分寝室">分寝室</h1>
+<p><strong>作者 陈越 单位 浙江大学</strong></p>
+<h2 id="题目描述">题目描述</h2>
+<p>学校新建了宿舍楼，共有 n 间寝室。等待分配的学生中，有女生n0位、男生n1位。所有待分配的学生都必须分到一间寝室。所有的寝室都要分出去，最后不能有寝室留空。<br>
+现请你写程序完成寝室的自动分配。分配规则如下：</p>
+<ul>
+<li>男女生不能混住；</li>
+<li>不允许单人住一间寝室；</li>
+<li>对每种性别的学生，每间寝室入住的人数都必须相同；例如不能出现一部分寝室住 2 位女生，一部分寝室住 3 位女生的情况。但女生寝室都是 2 人一间，男生寝室都是 3 人一间，则是允许的；
+<ul>
+<li>在有多种分配方案满足前面三项要求的情况下，要求两种性别每间寝室入住的人数差最小。</li>
+</ul>
+</li>
+</ul>
+<h2 id="输入格式">输入格式</h2>
+<p>输入在一行中给出 3 个正整数 n0、n1、n，分别对应女生人数、男生人数、寝室数。数字间以空格分隔，均不超过 10^5。</p>
+<h2 id="输出格式">输出格式</h2>
+<p>在一行中顺序输出女生和男生被分配的寝室数量，其间以 1 个空格分隔。行首尾不得有多余空格。<br>
+如果有解，题目保证解是唯一的。如果无解，则在一行中输出 <code>No Solution</code>。</p>
+<h3 id="样例输入-1">样例输入 #1</h3>
+<pre><code>24 60 10
+</code></pre>
+<h3 id="样例输出-1">样例输出 #1</h3>
+<pre><code>4 6
+</code></pre>
+<h3 id="样例输入-2">样例输入 #2</h3>
+<pre><code>29 30 10
+</code></pre>
+<h3 id="样例输出-2">样例输出 #2</h3>
+<pre><code>No Solution
+</code></pre>
+<h2 id="题解">题解</h2>
+<p>定义变量r0,r1 存储男女宿舍的人数用于后面判断男女宿舍人数差条件。定义变量rn0,r01 存储宿舍数量结果。<br>
+从2循环到总房间数n，每次得出女生房间数p0和男生房间数p1=n-i，不从1开始从而避免被分配到0间房子。<br>
+用取余判断每个人是否都能完全分配到房子，并且确保人数差最小，同时判断是否有一人一房的情况<br>
+最后如果变量rn0仍然为-1说明条件不满足，输出No Solution，否则输出结果<br>
+Python</p>
+<pre><code class="language-Python">n0,n1,n = list(map(int,input().split()))
+r0 = -1
+r1 = 23767000
+rn0=-1
+rn1=-1
+for i in range(2,n):
+    p0 = i
+    p1 = n-i
+    if n0%p0==0 and n1%p1==0 and n0/p0 !=1 and n1/p1 !=1:
+        if abs(n0/p0-n1/p1)&lt;abs(r1-r0):
+            r0=n0/p0
+            r1=n1/p1
+            rn0=p0
+            rn1=p1
+if rn0==-1:
+    print(&quot;No Solution&quot;)
+else:
+    print(rn0,end=&quot; &quot;)
+    print(rn1)
+</code></pre>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://www.hugongzi.top/post/ti-jie-gplt2023-l1-1-zui-hao-de-wen-dang/">
+                <h3 class="post-title">
+                  【题解】PTA-L1-1 最好的文档
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://www.hugongzi.top/images/avatar.png?v=1710990080871" class="no-responsive avatar">
+    <div class="text-muted">温故而知新</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://www.hugongzi.top/post/ti-jie-pta-l1-7-fen-qin-shi/">【题解】PTA-L1-7 分寝室</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://www.hugongzi.top/post/ti-jie-gplt2023-l1-1-zui-hao-de-wen-dang/">【题解】PTA-L1-1 最好的文档</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://www.hugongzi.top/tag/ProblemExplanation/" class="badge ">
+          题解
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://www.hugongzi.top/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
+</html>

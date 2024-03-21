@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.hugongzi.top</id>
+    <title>狐公子</title>
+    <updated>2024-03-21T03:01:24.684Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://www.hugongzi.top"/>
+    <link rel="self" href="https://www.hugongzi.top/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://www.hugongzi.top/images/avatar.png</logo>
+    <icon>https://www.hugongzi.top/favicon.ico</icon>
+    <rights>All rights reserved 2024, 狐公子</rights>
+    <entry>
+        <title type="html"><![CDATA[【题解】PTA-L1-7 分寝室]]></title>
+        <id>https://www.hugongzi.top/post/ti-jie-pta-l1-7-fen-qin-shi/</id>
+        <link href="https://www.hugongzi.top/post/ti-jie-pta-l1-7-fen-qin-shi/">
+        </link>
+        <updated>2024-03-21T02:49:46.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="分寝室">分寝室</h1>
+<p><strong>作者 陈越 单位 浙江大学</strong></p>
+<h2 id="题目描述">题目描述</h2>
+<p>学校新建了宿舍楼，共有 n 间寝室。等待分配的学生中，有女生n0位、男生n1位。所有待分配的学生都必须分到一间寝室。所有的寝室都要分出去，最后不能有寝室留空。<br>
+现请你写程序完成寝室的自动分配。分配规则如下：</p>
+<ul>
+<li>男女生不能混住；</li>
+<li>不允许单人住一间寝室；</li>
+<li>对每种性别的学生，每间寝室入住的人数都必须相同；例如不能出现一部分寝室住 2 位女生，一部分寝室住 3 位女生的情况。但女生寝室都是 2 人一间，男生寝室都是 3 人一间，则是允许的；
+<ul>
+<li>在有多种分配方案满足前面三项要求的情况下，要求两种性别每间寝室入住的人数差最小。</li>
+</ul>
+</li>
+</ul>
+<h2 id="输入格式">输入格式</h2>
+<p>输入在一行中给出 3 个正整数 n0、n1、n，分别对应女生人数、男生人数、寝室数。数字间以空格分隔，均不超过 10^5。</p>
+<h2 id="输出格式">输出格式</h2>
+<p>在一行中顺序输出女生和男生被分配的寝室数量，其间以 1 个空格分隔。行首尾不得有多余空格。<br>
+如果有解，题目保证解是唯一的。如果无解，则在一行中输出 <code>No Solution</code>。</p>
+<h3 id="样例输入-1">样例输入 #1</h3>
+<pre><code>24 60 10
+</code></pre>
+<h3 id="样例输出-1">样例输出 #1</h3>
+<pre><code>4 6
+</code></pre>
+<h3 id="样例输入-2">样例输入 #2</h3>
+<pre><code>29 30 10
+</code></pre>
+<h3 id="样例输出-2">样例输出 #2</h3>
+<pre><code>No Solution
+</code></pre>
+<h2 id="题解">题解</h2>
+<p>定义变量r0,r1 存储男女宿舍的人数用于后面判断男女宿舍人数差条件。定义变量rn0,r01 存储宿舍数量结果。<br>
+从2循环到总房间数n，每次得出女生房间数p0和男生房间数p1=n-i，不从1开始从而避免被分配到0间房子。<br>
+用取余判断每个人是否都能完全分配到房子，并且确保人数差最小，同时判断是否有一人一房的情况<br>
+最后如果变量rn0仍然为-1说明条件不满足，输出No Solution，否则输出结果<br>
+Python</p>
+<pre><code class="language-Python">n0,n1,n = list(map(int,input().split()))
+r0 = -1
+r1 = 23767000
+rn0=-1
+rn1=-1
+for i in range(2,n):
+    p0 = i
+    p1 = n-i
+    if n0%p0==0 and n1%p1==0 and n0/p0 !=1 and n1/p1 !=1:
+        if abs(n0/p0-n1/p1)&lt;abs(r1-r0):
+            r0=n0/p0
+            r1=n1/p1
+            rn0=p0
+            rn1=p1
+if rn0==-1:
+    print(&quot;No Solution&quot;)
+else:
+    print(rn0,end=&quot; &quot;)
+    print(rn1)
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【题解】PTA-L1-1 最好的文档]]></title>
+        <id>https://www.hugongzi.top/post/ti-jie-gplt2023-l1-1-zui-hao-de-wen-dang/</id>
+        <link href="https://www.hugongzi.top/post/ti-jie-gplt2023-l1-1-zui-hao-de-wen-dang/">
+        </link>
+        <updated>2024-03-15T14:24:01.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="最好的文档">最好的文档</h1>
+<h2 id="题目描述">题目描述</h2>
+<p>有一位软件工程师说过一句很有道理的话：“Good code is its own best documentation.”（好代码本身就是最好的文档）。本题就请你直接在屏幕上输出这句话。</p>
+<p><strong>作者 陈越 单位 浙江大学</strong></p>
+<h2 id="输入格式">输入格式</h2>
+<p>本题没有输入。</p>
+<h2 id="输出格式">输出格式</h2>
+<p>在一行中输出 <code>Good code is its own best documentation.</code> 。</p>
+<h3 id="样例输入-1">样例输入 #1</h3>
+<pre><code>无
+</code></pre>
+<h3 id="样例输出-1">样例输出 #1</h3>
+<pre><code>Good code is its own best documentation.
+</code></pre>
+<h2 id="题解">题解</h2>
+<p>PHP</p>
+<pre><code class="language-PHP">Good code is its own best documentation.
+</code></pre>
+<p>Python</p>
+<pre><code class="language-Python">print(&quot;Good code is its own best documentation.&quot;);
+</code></pre>
+<p>Ruby</p>
+<pre><code class="language-Ruby">puts &quot;Good code is its own best documentation.&quot;;
+</code></pre>
+<p>Bash</p>
+<pre><code class="language-Bash">echo &quot;Good code is its own best documentation.&quot;
+</code></pre>
+<p>Plaintext</p>
+<pre><code class="language-plaintext">Good code is its own best documentation.
+
+</code></pre>
+<p>Common Lisp</p>
+<pre><code class="language-lisp">(write-line &quot;Good code is its own best documentation.&quot;)
+</code></pre>
+<p>Lua</p>
+<pre><code class="language-lua">print(&quot;Good code is its own best documentation.&quot;)
+</code></pre>
+<p>Pascal</p>
+<pre><code class="language-Pascal">begin
+   writeln('Good code is its own best documentation.');
+end. 
+</code></pre>
+<p>Java</p>
+<pre><code class="language-Java">public class Main{
+    public static void main(String[] args){
+        System.out.println(&quot;Good code is its own best documentation.&quot;);
+    }
+}
+</code></pre>
+<p>C++</p>
+<pre><code class="language-C++">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int main()
+{
+cout &lt;&lt; &quot;Good code is its own best documentation.&quot; &lt;&lt; endl;
+return 0;
+}
+</code></pre>
+<p>C</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+int main()
+{
+printf(&quot;Good code is its own best documentation.\n&quot;);
+return 0;
+}
+</code></pre>
+<p>Go</p>
+<pre><code class="language-Go">package main
+import &quot;fmt&quot;
+func main() {
+    fmt.Println(&quot;Good code is its own best documentation.&quot;)
+}
+</code></pre>
+]]></content>
+    </entry>
+</feed>
